@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Markdown Viewer Ultra",
   "version": "0.2.0",
-  "description": "Render text/markdown responses (and .md files) as formatted Markdown with GitHub-style CSS. Toggle dark mode and raw view from the toolbar.",
+  "description": "Render text/markdown responses and .md files as GitHub-styled Markdown. Light/dark theme. Toggle raw view anytime.",
   "permissions": ["storage"],
   "action": {
     "default_title": "Markdown Viewer Ultra",
