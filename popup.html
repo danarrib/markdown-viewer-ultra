@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Markdown Viewer Ultra</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="head">
+      <h1>Markdown Viewer Ultra</h1>
+    </header>
+
+    <section class="row">
+      <label class="label">Theme</label>
+      <div class="seg" role="radiogroup" aria-label="Theme">
+        <input type="radio" name="theme" id="theme-auto" value="auto" />
+        <label for="theme-auto">Auto</label>
+        <input type="radio" name="theme" id="theme-light" value="light" />
+        <label for="theme-light">Light</label>
+        <input type="radio" name="theme" id="theme-dark" value="dark" />
+        <label for="theme-dark">Dark</label>
+      </div>
+    </section>
+
+    <section id="render-section" class="row hidden">
+      <label class="label">Current page</label>
+      <button id="toggle-render" type="button" class="btn">Show raw markdown</button>
+      <p id="render-state-note" class="muted"></p>
+    </section>
+
+    <p id="not-md" class="row muted hidden">
+      Current page is not Markdown. Open a <code>.md</code> file or a page with
+      <code>Content-Type: text/markdown</code>.
+    </p>
+
+    <footer class="foot muted">v0.2.0</footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
