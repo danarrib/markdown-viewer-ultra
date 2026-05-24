@@ -4,6 +4,20 @@ Paste-ready copy for the [Web Store Developer Dashboard](https://chrome.google.c
 
 ---
 
+## Submission flow
+
+1. Bump `version` in `manifest.json` if updating (semver fine)
+2. ZIP the *contents* of this folder (not the folder itself). Exclude: `.git/`, `store-listing.md`, dev-only files
+   ```powershell
+   Compress-Archive -Path *.json,*.js,*.css,*.html,icons -DestinationPath md-viewer-ultra-v0.2.0.zip
+   ```
+3. Upload at `chrome.google.com/webstore/devconsole` → New item / new version
+4. Paste copy from the sections below into the matching fields
+5. Set **Visibility: Unlisted** for first release — lets you test the install flow with the public listing URL before going Public
+6. Submit. First review can take a few hours to ~3 days; subsequent updates are usually faster.
+
+---
+
 ## Listing basics
 
 **Name**
@@ -170,20 +184,6 @@ Required before submission:
 3. Toolbar popup open with theme picker
 4. Raw view (footer showing "See rendered" link)
 5. Side-by-side or annotated "before/after" of a markdown page
-
----
-
-## Submission flow
-
-1. Bump `version` in `manifest.json` if updating (semver fine)
-2. ZIP the *contents* of this folder (not the folder itself). Exclude: `.git/`, `store-listing.md`, dev-only files
-   ```powershell
-   Compress-Archive -Path *.json,*.js,*.css,*.html,icons -DestinationPath md-viewer-ultra-v0.2.0.zip
-   ```
-3. Upload at `chrome.google.com/webstore/devconsole` → New item / new version
-4. Paste copy above into the respective fields
-5. Set **Visibility: Unlisted** for first release — lets you test the install flow with the public listing URL before going Public
-6. Submit. First review can take a few hours to ~3 days; subsequent updates are usually faster.
 
 ---
 
