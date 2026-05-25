@@ -7,9 +7,13 @@ Paste-ready copy for the [Web Store Developer Dashboard](https://chrome.google.c
 ## Submission flow
 
 1. Bump `version` in `manifest.json` if updating (semver fine)
-2. ZIP the *contents* of this folder (not the folder itself). Exclude: `.git/`, `store-listing.md`, dev-only files
+2. ZIP the *contents* of this folder (not the folder itself). The command below lists every shipping file explicitly — README, sample.md, store-assets, PRIVACY.md, store-listing.md, and `.git/` are intentionally omitted.
    ```powershell
-   Compress-Archive -Path *.json,*.js,*.css,*.html,icons -DestinationPath md-viewer-ultra-v0.2.0.zip
+   $version = (Get-Content manifest.json -Raw | ConvertFrom-Json).version
+   Compress-Archive `
+     -Path manifest.json,background.js,content.js,popup.html,popup.js,popup.css,styles.css,github-markdown.css,hljs-theme.css,marked.min.js,purify.min.js,highlight.min.js,icons,_locales `
+     -DestinationPath "md-viewer-ultra-v$version.zip" `
+     -CompressionLevel Optimal
    ```
 3. Upload at `chrome.google.com/webstore/devconsole` → New item / new version
 4. Paste copy from the sections below into the matching fields
@@ -189,5 +193,6 @@ Required before submission:
 
 ## Version history
 
+- **0.3.0** (in progress) — Localization for 8 languages (en, pt_BR, es, fr, de, it, ja, zh_CN) via `_locales/`. Uninstall URL points to the feedback issue. Background service worker added. Syntax highlighting via highlight.js Common build (~30 languages) mapped to GitHub prettylights variables so code colors follow theme.
 - **0.2.0** — Toolbar popup with theme picker (auto/light/dark) and raw-view toggle. Footer "See original" link. PNG icons.
 - **0.1.0** — Initial release. Auto-render `text/markdown` responses and `.md` files with GitHub styling.

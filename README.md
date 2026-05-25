@@ -73,4 +73,5 @@ md-viewer-ultra/
 curl -sSL -o marked.min.js       https://cdn.jsdelivr.net/npm/marked@14.1.3/marked.min.js
 curl -sSL -o github-markdown.css https://cdn.jsdelivr.net/npm/github-markdown-css@5.6.1/github-markdown.css
 curl -sSL -o purify.min.js       https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js
+curl -sSL -o highlight.min.js    https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js
 ```
