@@ -1,0 +1,13 @@
+{
+  "name": "md-viewer-ultra-screenshots",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright-driven Chrome Web Store screenshots for Markdown Viewer Ultra.",
+  "scripts": {
+    "postinstall": "playwright install chromium",
+    "screenshots": "node take-screenshots.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}
