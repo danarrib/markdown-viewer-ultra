@@ -68,10 +68,22 @@
     else if (mode === 'light') root.classList.add('mvu-force-light');
   };
 
-  chrome.storage.sync.get({ darkMode: 'auto' }, ({ darkMode }) => applyDarkMode(darkMode));
+  const applyContentWidth = (width) => {
+    const root = document.documentElement;
+    root.classList.remove('mvu-width-narrow', 'mvu-width-wide', 'mvu-width-full');
+    if (width === 'wide') root.classList.add('mvu-width-wide');
+    else if (width === 'full') root.classList.add('mvu-width-full');
+  };
+
+  chrome.storage.sync.get({ darkMode: 'auto', contentWidth: 'narrow' }, (s) => {
+    applyDarkMode(s.darkMode);
+    applyContentWidth(s.contentWidth);
+  });
 
   chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === 'sync' && changes.darkMode) applyDarkMode(changes.darkMode.newValue);
+    if (area !== 'sync') return;
+    if (changes.darkMode) applyDarkMode(changes.darkMode.newValue);
+    if (changes.contentWidth) applyContentWidth(changes.contentWidth.newValue);
   });
 
   chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {

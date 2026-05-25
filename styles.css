@@ -48,6 +48,29 @@ body.mvu-body {
   }
 }
 
+/* === Content width override ===
+   Default is the 920px max-width declared on .mvu-article above.
+   Classes on <html> bump it up or remove it entirely. */
+
+html.mvu-width-wide .mvu-article.markdown-body,
+html.mvu-width-wide .mvu-raw,
+html.mvu-width-wide .mvu-footer {
+  max-width: 1440px;
+}
+
+html.mvu-width-full .mvu-article.markdown-body,
+html.mvu-width-full .mvu-raw {
+  max-width: none;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+html.mvu-width-full .mvu-footer {
+  max-width: none;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 /* === Raw view === */
 
 body.mvu-raw-mode {

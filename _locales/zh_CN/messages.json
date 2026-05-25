@@ -12,5 +12,9 @@
   "popupNotMarkdown": { "message": "当前页面不是 Markdown。请打开 <code>.md</code> 文件或 <code>Content-Type: text/markdown</code> 的页面。" },
   "footerPrefix": { "message": "由 Markdown Viewer Ultra 渲染" },
   "footerSeeOriginal": { "message": "查看原文" },
-  "footerSeeRendered": { "message": "查看渲染" }
+  "footerSeeRendered": { "message": "查看渲染" },
+  "popupWidthLabel": { "message": "宽度" },
+  "popupWidthNarrow": { "message": "窄" },
+  "popupWidthWide": { "message": "宽" },
+  "popupWidthFull": { "message": "全宽" }
 }

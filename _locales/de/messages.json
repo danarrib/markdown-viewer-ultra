@@ -12,5 +12,9 @@
   "popupNotMarkdown": { "message": "Die aktuelle Seite ist kein Markdown. Öffne eine <code>.md</code>-Datei oder eine Seite mit <code>Content-Type: text/markdown</code>." },
   "footerPrefix": { "message": "Gerendert mit Markdown Viewer Ultra" },
   "footerSeeOriginal": { "message": "Original anzeigen" },
-  "footerSeeRendered": { "message": "Gerendertes anzeigen" }
+  "footerSeeRendered": { "message": "Gerendertes anzeigen" },
+  "popupWidthLabel": { "message": "Breite" },
+  "popupWidthNarrow": { "message": "Schmal" },
+  "popupWidthWide": { "message": "Breit" },
+  "popupWidthFull": { "message": "Voll" }
 }

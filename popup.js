@@ -1,4 +1,5 @@
 const themeInputs = document.querySelectorAll('input[name="theme"]');
+const widthInputs = document.querySelectorAll('input[name="width"]');
 const renderSection = document.getElementById('render-section');
 const toggleBtn = document.getElementById('toggle-render');
 const stateNote = document.getElementById('render-state-note');
@@ -35,14 +36,25 @@ const showMarkdownControls = (isRendered) => {
   updateRenderUi(isRendered);
 };
 
-chrome.storage.sync.get({ darkMode: 'auto' }, ({ darkMode }) => {
-  const el = document.getElementById('theme-' + darkMode);
-  if (el) el.checked = true;
-});
+chrome.storage.sync.get(
+  { darkMode: 'auto', contentWidth: 'narrow' },
+  ({ darkMode, contentWidth }) => {
+    const themeEl = document.getElementById('theme-' + darkMode);
+    if (themeEl) themeEl.checked = true;
+    const widthEl = document.getElementById('width-' + contentWidth);
+    if (widthEl) widthEl.checked = true;
+  }
+);
 
 themeInputs.forEach((input) => {
   input.addEventListener('change', () => {
     if (input.checked) chrome.storage.sync.set({ darkMode: input.value });
+  });
+});
+
+widthInputs.forEach((input) => {
+  input.addEventListener('change', () => {
+    if (input.checked) chrome.storage.sync.set({ contentWidth: input.value });
   });
 });
 

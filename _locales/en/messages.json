@@ -54,5 +54,21 @@
   "footerSeeRendered": {
     "message": "See rendered",
     "description": "Footer link: switch from raw source back to the rendered HTML."
+  },
+  "popupWidthLabel": {
+    "message": "Width",
+    "description": "Section label above the content-width picker in the toolbar popup."
+  },
+  "popupWidthNarrow": {
+    "message": "Narrow",
+    "description": "Width picker option: 920px max-width (default)."
+  },
+  "popupWidthWide": {
+    "message": "Wide",
+    "description": "Width picker option: 1440px max-width."
+  },
+  "popupWidthFull": {
+    "message": "Full",
+    "description": "Width picker option: no max-width — content fills the viewport."
   }
 }

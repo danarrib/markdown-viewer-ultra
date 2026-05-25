@@ -12,5 +12,9 @@
   "popupNotMarkdown": { "message": "現在のページはMarkdownではありません。<code>.md</code>ファイル、または<code>Content-Type: text/markdown</code>のページを開いてください。" },
   "footerPrefix": { "message": "Markdown Viewer Ultra でレンダリング" },
   "footerSeeOriginal": { "message": "原文を表示" },
-  "footerSeeRendered": { "message": "レンダリングを表示" }
+  "footerSeeRendered": { "message": "レンダリングを表示" },
+  "popupWidthLabel": { "message": "幅" },
+  "popupWidthNarrow": { "message": "狭い" },
+  "popupWidthWide": { "message": "広い" },
+  "popupWidthFull": { "message": "全幅" }
 }
