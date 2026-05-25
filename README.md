@@ -17,11 +17,14 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 - Falls back to URL extension detection (`.md`, `.markdown`, `.mdown`, `.mkd`, `.mkdn`) when the server sends `text/plain`
 - GitHub-flavored Markdown via [marked](https://marked.js.org/)
 - HTML sanitized with [DOMPurify](https://github.com/cure53/DOMPurify)
+- Syntax highlighting via [highlight.js](https://highlightjs.org/) Common build (~30 languages) — code colors follow the active theme
 - Theme override: **Auto** (follows OS), **Light**, **Dark** — synced via `chrome.storage.sync`
 - Toggle between rendered and raw view per page:
   - Footer link on rendered page: **See original** / **See rendered**
   - Toolbar popup button: same toggle
+- Localized UI in 8 languages: English, Português (BR), Español, Français, Deutsch, Italiano, 日本語, 简体中文
 - Toolbar icon (16/32/48/128 PNGs)
+- Opens the feedback issue when uninstalled
 
 ## Test it
 
@@ -41,29 +44,35 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 
 ```
 md-viewer-ultra/
-├── manifest.json         # MV3 declaration (action + content_script)
-├── content.js            # Detection, render, raw/render toggle, theme apply
+├── manifest.json         # MV3 declaration (action + content_script + bg)
+├── background.js         # Service worker — registers uninstall URL
+├── content.js            # Detection, render, raw/render toggle, theme apply, hljs
 ├── styles.css            # Page chrome, footer, raw view, force-theme vars
+├── hljs-theme.css        # Maps hljs token classes to GitHub prettylights vars
 ├── github-markdown.css   # Vendored github-markdown-css@5.6.1
 ├── marked.min.js         # Vendored marked@14.1.3
 ├── purify.min.js         # Vendored dompurify@3.1.7
+├── highlight.min.js      # Vendored highlight.js@11.10.0 (Common build)
 ├── popup.html            # Toolbar popup
-├── popup.js              # Popup logic (theme + toggle)
+├── popup.js              # Popup logic (theme + toggle + i18n + version)
 ├── popup.css             # Popup styling
-├── icons/
-│   ├── icon-16.png
-│   ├── icon-32.png
-│   ├── icon-48.png
-│   └── icon-128.png
-├── sample.md             # Test fixture
+├── icons/                # 16/32/48/128 PNGs
+├── _locales/             # i18n strings — en (default) + 7 translations
+│   ├── en/messages.json
+│   ├── pt_BR/messages.json
+│   └── …
+├── store-assets/         # Web Store promo tile, marquee, screenshots (not shipped)
+├── sample.md             # Test fixture covering all formatting
+├── PRIVACY.md            # Privacy policy (Chrome Web Store URL)
+├── store-listing.md      # Web Store listing copy + submission flow
 └── README.md
 ```
 
 ## Known limitations / next steps
 
-- No syntax highlighting on code blocks yet — drop in [highlight.js](https://highlightjs.org/) if you want it.
 - Render/raw toggle state is per-tab and resets on reload (intentional — the page already starts in rendered view).
 - Servers that send `text/html` for markdown won't be detected (very rare).
+- Syntax highlighting uses the Common build (~30 languages). For rarer languages (Erlang, Nim, Crystal, etc.) you'll get plain-text fallback.
 
 <img width="1280" height="800" alt="screenshot (3)" src="https://github.com/user-attachments/assets/13fa1dcd-add2-4612-8b14-a2d034325683" />
 
