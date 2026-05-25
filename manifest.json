@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Markdown Viewer Ultra",
-  "version": "0.2.0",
-  "description": "Render text/markdown responses and .md files as GitHub-styled Markdown. Light/dark theme. Toggle raw view anytime.",
+  "version": "0.3.0",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
   "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_title": "Markdown Viewer Ultra",
     "default_popup": "popup.html",
@@ -23,8 +27,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["marked.min.js", "purify.min.js", "content.js"],
-      "css": ["github-markdown.css", "styles.css"],
+      "js": ["marked.min.js", "purify.min.js", "highlight.min.js", "content.js"],
+      "css": ["github-markdown.css", "hljs-theme.css", "styles.css"],
       "run_at": "document_end",
       "all_frames": false
     }

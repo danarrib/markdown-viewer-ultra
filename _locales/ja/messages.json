@@ -1,0 +1,16 @@
+{
+  "extDescription": { "message": "text/markdownレスポンスと.mdファイルをGitHub風Markdownで表示。ライト/ダークテーマ。原文表示の切替も可能。" },
+  "popupThemeLabel": { "message": "テーマ" },
+  "popupThemeAuto": { "message": "自動" },
+  "popupThemeLight": { "message": "ライト" },
+  "popupThemeDark": { "message": "ダーク" },
+  "popupCurrentPageLabel": { "message": "現在のページ" },
+  "popupShowRaw": { "message": "原文を表示" },
+  "popupShowRendered": { "message": "レンダリング表示" },
+  "popupStateRendered": { "message": "現在、レンダリング表示中。" },
+  "popupStateRaw": { "message": "現在、原文を表示中。" },
+  "popupNotMarkdown": { "message": "現在のページはMarkdownではありません。<code>.md</code>ファイル、または<code>Content-Type: text/markdown</code>のページを開いてください。" },
+  "footerPrefix": { "message": "Markdown Viewer Ultra でレンダリング" },
+  "footerSeeOriginal": { "message": "原文を表示" },
+  "footerSeeRendered": { "message": "レンダリングを表示" }
+}

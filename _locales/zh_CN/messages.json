@@ -1,0 +1,16 @@
+{
+  "extDescription": { "message": "将 text/markdown 响应和 .md 文件渲染为 GitHub 风格的 Markdown。亮色/暗色主题。可随时切换查看原文。" },
+  "popupThemeLabel": { "message": "主题" },
+  "popupThemeAuto": { "message": "自动" },
+  "popupThemeLight": { "message": "亮色" },
+  "popupThemeDark": { "message": "暗色" },
+  "popupCurrentPageLabel": { "message": "当前页面" },
+  "popupShowRaw": { "message": "显示原文" },
+  "popupShowRendered": { "message": "显示渲染" },
+  "popupStateRendered": { "message": "当前显示渲染视图。" },
+  "popupStateRaw": { "message": "当前显示原始文本。" },
+  "popupNotMarkdown": { "message": "当前页面不是 Markdown。请打开 <code>.md</code> 文件或 <code>Content-Type: text/markdown</code> 的页面。" },
+  "footerPrefix": { "message": "由 Markdown Viewer Ultra 渲染" },
+  "footerSeeOriginal": { "message": "查看原文" },
+  "footerSeeRendered": { "message": "查看渲染" }
+}

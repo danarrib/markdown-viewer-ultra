@@ -1,0 +1,16 @@
+{
+  "extDescription": { "message": "Rendert text/markdown-Antworten und .md-Dateien als GitHub-Markdown. Helles/dunkles Theme. Rohansicht umschaltbar." },
+  "popupThemeLabel": { "message": "Theme" },
+  "popupThemeAuto": { "message": "Auto" },
+  "popupThemeLight": { "message": "Hell" },
+  "popupThemeDark": { "message": "Dunkel" },
+  "popupCurrentPageLabel": { "message": "Aktuelle Seite" },
+  "popupShowRaw": { "message": "Quelltext anzeigen" },
+  "popupShowRendered": { "message": "Gerendert anzeigen" },
+  "popupStateRendered": { "message": "Gerenderte Ansicht wird angezeigt." },
+  "popupStateRaw": { "message": "Quelltext wird angezeigt." },
+  "popupNotMarkdown": { "message": "Die aktuelle Seite ist kein Markdown. Öffne eine <code>.md</code>-Datei oder eine Seite mit <code>Content-Type: text/markdown</code>." },
+  "footerPrefix": { "message": "Gerendert mit Markdown Viewer Ultra" },
+  "footerSeeOriginal": { "message": "Original anzeigen" },
+  "footerSeeRendered": { "message": "Gerendertes anzeigen" }
+}

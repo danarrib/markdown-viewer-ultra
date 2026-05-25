@@ -18,9 +18,11 @@
   const escapeHtml = (s) =>
     s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-  const footerHtml = (linkText) =>
-    `<footer class="mvu-footer">Markdown Viewer Ultra Render &mdash; ` +
-    `<a href="#" id="mvu-toggle">${linkText}</a></footer>`;
+  const t = (key) => chrome.i18n.getMessage(key) || key;
+
+  const footerHtml = (linkKey) =>
+    `<footer class="mvu-footer">${t('footerPrefix')} &mdash; ` +
+    `<a href="#" id="mvu-toggle">${t(linkKey)}</a></footer>`;
 
   const renderRendered = () => {
     const dirty = marked.parse(rawText);
@@ -28,7 +30,10 @@
     document.body.className = 'mvu-body';
     document.body.innerHTML =
       `<article class="markdown-body mvu-article">${clean}</article>` +
-      footerHtml('See original');
+      footerHtml('footerSeeOriginal');
+    document.querySelectorAll('article.markdown-body pre code').forEach((el) => {
+      try { hljs.highlightElement(el); } catch (_) { /* unsupported language — leave plain */ }
+    });
     const pathLeaf = decodeURIComponent(location.pathname.split('/').pop() || '');
     if (!document.title || document.title === location.href || document.title === pathLeaf) {
       const h = document.body.querySelector('h1, h2');
@@ -40,7 +45,7 @@
     document.body.className = 'mvu-body mvu-raw-mode';
     document.body.innerHTML =
       `<pre class="mvu-raw">${escapeHtml(rawText)}</pre>` +
-      footerHtml('See rendered');
+      footerHtml('footerSeeRendered');
   };
 
   const apply = () => {

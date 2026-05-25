@@ -11,29 +11,29 @@
     </header>
 
     <section class="row">
-      <label class="label">Theme</label>
+      <label class="label" data-i18n="popupThemeLabel">Theme</label>
       <div class="seg" role="radiogroup" aria-label="Theme">
         <input type="radio" name="theme" id="theme-auto" value="auto" />
-        <label for="theme-auto">Auto</label>
+        <label for="theme-auto" data-i18n="popupThemeAuto">Auto</label>
         <input type="radio" name="theme" id="theme-light" value="light" />
-        <label for="theme-light">Light</label>
+        <label for="theme-light" data-i18n="popupThemeLight">Light</label>
         <input type="radio" name="theme" id="theme-dark" value="dark" />
-        <label for="theme-dark">Dark</label>
+        <label for="theme-dark" data-i18n="popupThemeDark">Dark</label>
       </div>
     </section>
 
     <section id="render-section" class="row hidden">
-      <label class="label">Current page</label>
+      <label class="label" data-i18n="popupCurrentPageLabel">Current page</label>
       <button id="toggle-render" type="button" class="btn">Show raw markdown</button>
       <p id="render-state-note" class="muted"></p>
     </section>
 
-    <p id="not-md" class="row muted hidden">
+    <p id="not-md" class="row muted hidden" data-i18n="popupNotMarkdown" data-i18n-html>
       Current page is not Markdown. Open a <code>.md</code> file or a page with
       <code>Content-Type: text/markdown</code>.
     </p>
 
-    <footer class="foot muted">v0.2.0</footer>
+    <footer class="foot muted" id="version"></footer>
 
     <script src="popup.js"></script>
   </body>

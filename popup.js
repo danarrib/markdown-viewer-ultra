@@ -4,11 +4,24 @@ const toggleBtn = document.getElementById('toggle-render');
 const stateNote = document.getElementById('render-state-note');
 const notMd = document.getElementById('not-md');
 
+document.querySelectorAll('[data-i18n]').forEach((el) => {
+  const key = el.getAttribute('data-i18n');
+  const msg = chrome.i18n.getMessage(key);
+  if (!msg) return;
+  if (el.hasAttribute('data-i18n-html')) el.innerHTML = msg;
+  else el.textContent = msg;
+});
+
+const versionEl = document.getElementById('version');
+if (versionEl) versionEl.textContent = 'v' + chrome.runtime.getManifest().version;
+
 const updateRenderUi = (rendered) => {
-  toggleBtn.textContent = rendered ? 'Show raw markdown' : 'Show rendered';
-  stateNote.textContent = rendered
-    ? 'Currently showing rendered view.'
-    : 'Currently showing raw text.';
+  toggleBtn.textContent = chrome.i18n.getMessage(
+    rendered ? 'popupShowRaw' : 'popupShowRendered'
+  );
+  stateNote.textContent = chrome.i18n.getMessage(
+    rendered ? 'popupStateRendered' : 'popupStateRaw'
+  );
 };
 
 const showNotMarkdown = () => {

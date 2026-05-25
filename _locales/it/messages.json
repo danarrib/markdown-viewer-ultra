@@ -1,0 +1,16 @@
+{
+  "extDescription": { "message": "Visualizza risposte text/markdown e file .md come Markdown stile GitHub. Tema chiaro/scuro. Mostra l'originale a richiesta." },
+  "popupThemeLabel": { "message": "Tema" },
+  "popupThemeAuto": { "message": "Auto" },
+  "popupThemeLight": { "message": "Chiaro" },
+  "popupThemeDark": { "message": "Scuro" },
+  "popupCurrentPageLabel": { "message": "Pagina corrente" },
+  "popupShowRaw": { "message": "Mostra markdown originale" },
+  "popupShowRendered": { "message": "Mostra renderizzato" },
+  "popupStateRendered": { "message": "Visualizzazione renderizzata attiva." },
+  "popupStateRaw": { "message": "Visualizzazione del testo originale." },
+  "popupNotMarkdown": { "message": "La pagina corrente non è Markdown. Apri un file <code>.md</code> o una pagina con <code>Content-Type: text/markdown</code>." },
+  "footerPrefix": { "message": "Renderizzato da Markdown Viewer Ultra" },
+  "footerSeeOriginal": { "message": "Mostra originale" },
+  "footerSeeRendered": { "message": "Mostra renderizzato" }
+}

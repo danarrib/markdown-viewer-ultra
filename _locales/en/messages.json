@@ -1,0 +1,58 @@
+{
+  "extDescription": {
+    "message": "Render text/markdown responses and .md files as GitHub-styled Markdown. Light/dark theme. Toggle raw view anytime.",
+    "description": "Extension description shown on the Chrome Web Store card, chrome://extensions, and toolbar icon tooltip. Hard 132-char limit per locale."
+  },
+  "popupThemeLabel": {
+    "message": "Theme",
+    "description": "Section label above the theme picker in the toolbar popup."
+  },
+  "popupThemeAuto": {
+    "message": "Auto",
+    "description": "Theme picker option: follow the operating-system color scheme."
+  },
+  "popupThemeLight": {
+    "message": "Light",
+    "description": "Theme picker option: force light theme."
+  },
+  "popupThemeDark": {
+    "message": "Dark",
+    "description": "Theme picker option: force dark theme."
+  },
+  "popupCurrentPageLabel": {
+    "message": "Current page",
+    "description": "Section label above the per-page render toggle button."
+  },
+  "popupShowRaw": {
+    "message": "Show raw markdown",
+    "description": "Button text: switch from rendered HTML to the raw markdown source view."
+  },
+  "popupShowRendered": {
+    "message": "Show rendered",
+    "description": "Button text: switch from raw source back to the rendered HTML view."
+  },
+  "popupStateRendered": {
+    "message": "Currently showing rendered view.",
+    "description": "Status note under the toggle button when the page is rendered."
+  },
+  "popupStateRaw": {
+    "message": "Currently showing raw text.",
+    "description": "Status note under the toggle button when the page shows raw source."
+  },
+  "popupNotMarkdown": {
+    "message": "Current page is not Markdown. Open a <code>.md</code> file or a page with <code>Content-Type: text/markdown</code>.",
+    "description": "Notice shown when the popup opens on a non-Markdown page. Preserve the <code> tags around .md and Content-Type — they style those as inline code."
+  },
+  "footerPrefix": {
+    "message": "Markdown Viewer Ultra Render",
+    "description": "Footer label on rendered pages, before the See original / See rendered link. Keep the product name 'Markdown Viewer Ultra' in English; translate only the surrounding wording."
+  },
+  "footerSeeOriginal": {
+    "message": "See original",
+    "description": "Footer link: switch from rendered HTML to the raw markdown source."
+  },
+  "footerSeeRendered": {
+    "message": "See rendered",
+    "description": "Footer link: switch from raw source back to the rendered HTML."
+  }
+}
