@@ -49,10 +49,10 @@ Render Markdown content as formatted HTML when a page is served with the text/ma
 ## Short description (max 132 characters)
 
 ```
-Render text/markdown responses and .md files as GitHub-styled Markdown. Light/dark theme. Toggle raw view anytime.
+Render Markdown files and text/markdown responses with syntax highlighting, light/dark themes, and adjustable width.
 ```
 
-(115 chars — leaves room if you want to tweak.)
+(116 chars — leaves room if you want to tweak.)
 
 ---
 
@@ -70,31 +70,35 @@ WHAT IT RENDERS
 
 FEATURES
 • Toolbar popup with three themes: Auto (follows your OS), Light, Dark
+• Content-width picker: Narrow (920px), Wide (1440px), or Full (fills the window)
+• Syntax highlighting for ~30 common languages (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, and more) — colors follow the active theme
+• Localized UI in 8 languages: English, Português (BR), Español, Français, Deutsch, Italiano, 日本語, 简体中文
 • "See original" link in the page footer to flip to the raw Markdown source, and "See rendered" to flip back
-• Same toggle is available in the popup
-• GitHub-style typography and code-block coloring
+• Same toggles are available in the popup
+• GitHub-style typography and code-block coloring (including light/dark prettylights palette)
 • Mobile-friendly responsive layout
-• Theme preference syncs across your signed-in Chrome browsers
+• Theme + width preferences sync across your signed-in Chrome browsers
 
 PRIVACY
 • No data collection — at all
 • No network requests — every render happens locally in your browser
 • No analytics, no telemetry, no tracking
-• The only thing stored is your theme preference (auto / light / dark), kept in Chrome's local storage
+• The only things stored are your theme and width preferences, kept in Chrome's built-in storage
+• On uninstall, Chrome opens the project's feedback page so you can tell us what to fix
 
 SECURITY
 • Output is sanitized with DOMPurify before being inserted into the page
-• Manifest V3, no remote code, no eval
+• Manifest V3, no remote code, no eval — all libraries (marked, DOMPurify, highlight.js, github-markdown-css) are bundled locally
 • Open source — review the code yourself
 
 HOW TO USE
 1. Install the extension
 2. (Optional) Enable "Allow access to file URLs" on the extension's details page if you want it to work on local .md files
 3. Open any Markdown page — it renders automatically
-4. Click the toolbar icon to switch theme or view the original source
+4. Click the toolbar icon to switch theme, change width, or view the original source
 
 PERMISSIONS
-• Storage — saves your theme preference
+• Storage — saves your theme and width preferences
 • Access to all sites — needed because Markdown can be served from any domain, and Chrome only exposes the response MIME type after the page loads. The extension exits immediately on every page that isn't Markdown.
 
 Questions, bugs, or feature requests? Open an issue on the project page.
@@ -108,7 +112,7 @@ The dashboard asks for a justification per permission. Paste these into the matc
 
 **`storage` permission**
 ```
-Used to persist the user's theme preference (Auto / Light / Dark) across sessions and sync it across the user's signed-in Chrome installations via chrome.storage.sync. No other data is stored.
+Used to persist the user's display preferences — theme (Auto / Light / Dark) and content width (Narrow / Wide / Full) — across sessions and sync them across the user's signed-in Chrome installations via chrome.storage.sync. No other data is stored.
 ```
 
 **Host permission — `<all_urls>`**
@@ -118,7 +122,7 @@ The extension must run on any URL because the response Content-Type (text/markdo
 
 **Remote code use**
 ```
-No. All libraries (marked, DOMPurify) are vendored locally in the extension package. No code is fetched at runtime.
+No. All libraries (marked, DOMPurify, highlight.js, github-markdown-css) are vendored locally in the extension package. No code is fetched at runtime.
 ```
 
 ---
@@ -156,7 +160,7 @@ WHAT THE EXTENSION DOES
 The extension reads the content of the page you are currently viewing only when that page's response Content-Type is text/markdown (or the URL ends in a Markdown file extension and is served as text/plain). It renders that content locally in your browser and replaces the page body with formatted HTML.
 
 WHAT IS STORED
-The extension stores a single preference — your selected theme (Auto, Light, or Dark) — using Chrome's built-in storage API. Chrome may sync this preference between your signed-in browsers using chrome.storage.sync. The extension does not store or transmit anything else.
+The extension stores two preferences — your selected theme (Auto, Light, or Dark) and your selected content width (Narrow, Wide, or Full) — using Chrome's built-in storage API. Chrome may sync these preferences between your signed-in browsers using chrome.storage.sync. The extension does not store or transmit anything else.
 
 WHAT IS NOT DONE
 - No analytics, no telemetry, no tracking
@@ -177,22 +181,48 @@ Required before submission:
 | Asset                 | Spec                  | Status |
 | --------------------- | --------------------- | ------ |
 | Store icon            | 128×128 PNG           | ✅ `icons/icon-128.png` |
-| Screenshots           | 1280×800 or 640×400, 1–5 | ⬜ TODO |
-| Small promo tile      | 440×280 PNG           | ⬜ TODO |
-| Marquee promo (optional) | 1400×560 PNG       | ⬜ TODO |
-| Privacy policy URL    | public webpage        | ⬜ TODO (if required) |
+| Screenshots           | 1280×800 or 640×400, 1–5 | ✅ `store-assets/screenshot-*.png` (script: `scripts/take-screenshots.js`) |
+| Small promo tile      | 440×280 PNG           | ✅ `store-assets/promo-440x280.png` |
+| Marquee promo (optional) | 1400×560 PNG       | ✅ `store-assets/promo-1400x560.png` |
+| Privacy policy URL    | public webpage        | ✅ `https://github.com/danarrib/markdown-viewer-ultra/blob/master/PRIVACY.md` |
 
-**Screenshot ideas** (capture from `sample.md` rendered):
-1. Light theme, full article visible (showcase headings + tables)
-2. Dark theme, code block visible
-3. Toolbar popup open with theme picker
-4. Raw view (footer showing "See rendered" link)
-5. Side-by-side or annotated "before/after" of a markdown page
+**Regenerating screenshots** — `scripts/take-screenshots.js` drives a real Chromium with the unpacked extension loaded and saves three 1280×800 PNGs (sample dark/narrow, BulletGCSS light/wide, raw view light/narrow). Run with `cd scripts && npm install && npm run screenshots`. Set `MVU_LANG=pt-BR` (or any other locale) before running to capture a localized variant.
 
 ---
 
-## Version history
+## Changelog
 
-- **0.3.0** (in progress) — Localization for 8 languages (en, pt_BR, es, fr, de, it, ja, zh_CN) via `_locales/`. Uninstall URL points to the feedback issue. Background service worker added. Syntax highlighting via highlight.js Common build (~30 languages) mapped to GitHub prettylights variables so code colors follow theme.
-- **0.2.0** — Toolbar popup with theme picker (auto/light/dark) and raw-view toggle. Footer "See original" link. PNG icons.
-- **0.1.0** — Initial release. Auto-render `text/markdown` responses and `.md` files with GitHub styling.
+Format follows [Keep a Changelog](https://keepachangelog.com/). Versions are git tags on `master`.
+
+### [0.3.0] — 2026-05-26
+
+**Added**
+- Localized UI in 8 languages — English (default), Português (BR), Español, Français, Deutsch, Italiano, 日本語, 简体中文 — via `_locales/` and Chrome's `chrome.i18n` API
+- Syntax highlighting on fenced code blocks via highlight.js Common build (~30 languages). Token classes mapped to GitHub's `--color-prettylights-syntax-*` variables so code colors follow the active theme
+- Content-width picker in the popup: **Narrow** (920px, default), **Wide** (1440px), **Full** (no max — fills the viewport with 1.5rem side margins)
+- Background service worker registers a `chrome.runtime.setUninstallURL` pointing at the feedback issue (`/issues/1`) so Chrome opens it when the user removes the extension
+
+**Changed**
+- Popup version label reads from `chrome.runtime.getManifest()` instead of being hardcoded
+- Manifest description shortened to fit the 132-char Web Store limit and converted to `__MSG_extDescription__` so each locale ships its own copy
+
+**Tooling**
+- `scripts/take-screenshots.js` — Playwright-driven generator for the 1280×800 store screenshots, runnable via `npm run screenshots`
+- `store-assets/` now contains promo tile (440×280), marquee (1400×560), and the three generated screenshots
+
+### [0.2.0] — 2026-05-23
+
+**Added**
+- Toolbar popup with theme picker (Auto / Light / Dark) persisted in `chrome.storage.sync`
+- Per-page raw / rendered toggle accessible from both the popup and the footer "See original" link
+- PNG icons at 16, 32, 48, 128
+- Forced light/dark theme overrides redeclaring the GitHub prettylights variables under `html.mvu-force-{light,dark}`
+
+**Submitted to the Chrome Web Store and approved.**
+
+### [0.1.0] — 2026-05-23
+
+**Added**
+- Initial scaffold: auto-render `text/markdown` and `text/x-markdown` responses, plus `.md` / `.markdown` / `.mdown` / `.mkd` / `.mkdn` files served as `text/plain`
+- marked@14 for parsing, DOMPurify@3 for sanitization, github-markdown-css@5 for typography
+- Auto-theme via `prefers-color-scheme` media query
