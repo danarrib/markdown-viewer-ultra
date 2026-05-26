@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "מציג תגובות text/markdown וקבצי .md כ-Markdown בסגנון GitHub. ערכת נושא בהירה/כהה. החלפת תצוגת מקור." },
+  "popupThemeLabel": { "message": "ערכת נושא" },
+  "popupThemeAuto": { "message": "אוטומטי" },
+  "popupThemeLight": { "message": "בהיר" },
+  "popupThemeDark": { "message": "כהה" },
+  "popupCurrentPageLabel": { "message": "הדף הנוכחי" },
+  "popupShowRaw": { "message": "הצג markdown גולמי" },
+  "popupShowRendered": { "message": "הצג מעובד" },
+  "popupStateRendered": { "message": "כעת מוצגת התצוגה המעובדת." },
+  "popupStateRaw": { "message": "כעת מוצג הטקסט הגולמי." },
+  "popupNotMarkdown": { "message": "הדף הנוכחי אינו Markdown. פתח קובץ <code>.md</code> או דף עם <code>Content-Type: text/markdown</code>." },
+  "footerPrefix": { "message": "עובד על ידי Markdown Viewer Ultra" },
+  "footerSeeOriginal": { "message": "הצג מקור" },
+  "footerSeeRendered": { "message": "הצג מעובד" },
+  "popupWidthLabel": { "message": "רוחב" },
+  "popupWidthNarrow": { "message": "צר" },
+  "popupWidthWide": { "message": "רחב" },
+  "popupWidthFull": { "message": "מלא" }
+}

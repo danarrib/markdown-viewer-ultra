@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "text/markdown और .md फ़ाइलों को GitHub-शैली में रेंडर करें। हल्की/गहरी थीम। मूल दृश्य कभी भी टॉगल करें।" },
+  "popupThemeLabel": { "message": "थीम" },
+  "popupThemeAuto": { "message": "स्वचालित" },
+  "popupThemeLight": { "message": "हल्की" },
+  "popupThemeDark": { "message": "गहरी" },
+  "popupCurrentPageLabel": { "message": "वर्तमान पृष्ठ" },
+  "popupShowRaw": { "message": "मूल markdown दिखाएँ" },
+  "popupShowRendered": { "message": "रेंडर किया हुआ दिखाएँ" },
+  "popupStateRendered": { "message": "अभी रेंडर किया हुआ दृश्य दिख रहा है।" },
+  "popupStateRaw": { "message": "अभी मूल टेक्स्ट दिख रहा है।" },
+  "popupNotMarkdown": { "message": "वर्तमान पृष्ठ Markdown नहीं है। कोई <code>.md</code> फ़ाइल या <code>Content-Type: text/markdown</code> वाला पृष्ठ खोलें।" },
+  "footerPrefix": { "message": "Markdown Viewer Ultra द्वारा रेंडर" },
+  "footerSeeOriginal": { "message": "मूल देखें" },
+  "footerSeeRendered": { "message": "रेंडर देखें" },
+  "popupWidthLabel": { "message": "चौड़ाई" },
+  "popupWidthNarrow": { "message": "संकीर्ण" },
+  "popupWidthWide": { "message": "चौड़ी" },
+  "popupWidthFull": { "message": "पूर्ण" }
+}

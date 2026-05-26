@@ -5,7 +5,9 @@
   "description": "Playwright-driven Chrome Web Store screenshots for Markdown Viewer Ultra.",
   "scripts": {
     "postinstall": "playwright install chromium",
-    "screenshots": "node take-screenshots.js"
+    "screenshots": "node take-screenshots.js",
+    "popup-screenshots": "node take-popup-screenshots.js",
+    "popup-cards": "node take-popup-cards.js"
   },
   "devDependencies": {
     "playwright": "^1.48.0"

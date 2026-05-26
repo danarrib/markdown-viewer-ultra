@@ -29,7 +29,7 @@
     const clean = DOMPurify.sanitize(dirty, { USE_PROFILES: { html: true } });
     document.body.className = 'mvu-body';
     document.body.innerHTML =
-      `<article class="markdown-body mvu-article">${clean}</article>` +
+      `<article class="markdown-body mvu-article" dir="auto">${clean}</article>` +
       footerHtml('footerSeeOriginal');
     document.querySelectorAll('article.markdown-body pre code').forEach((el) => {
       try { hljs.highlightElement(el); } catch (_) { /* unsupported language — leave plain */ }
@@ -44,7 +44,7 @@
   const renderRaw = () => {
     document.body.className = 'mvu-body mvu-raw-mode';
     document.body.innerHTML =
-      `<pre class="mvu-raw">${escapeHtml(rawText)}</pre>` +
+      `<pre class="mvu-raw" dir="auto">${escapeHtml(rawText)}</pre>` +
       footerHtml('footerSeeRendered');
   };
 

@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "Apresenta páginas text/markdown e ficheiros .md como Markdown estilo GitHub. Tema claro/escuro. Alternar vista original." },
+  "popupThemeLabel": { "message": "Tema" },
+  "popupThemeAuto": { "message": "Auto" },
+  "popupThemeLight": { "message": "Claro" },
+  "popupThemeDark": { "message": "Escuro" },
+  "popupCurrentPageLabel": { "message": "Página atual" },
+  "popupShowRaw": { "message": "Mostrar markdown original" },
+  "popupShowRendered": { "message": "Mostrar renderizado" },
+  "popupStateRendered": { "message": "A apresentar a vista renderizada." },
+  "popupStateRaw": { "message": "A apresentar o texto original." },
+  "popupNotMarkdown": { "message": "A página atual não é Markdown. Abra um ficheiro <code>.md</code> ou uma página com <code>Content-Type: text/markdown</code>." },
+  "footerPrefix": { "message": "Apresentado por Markdown Viewer Ultra" },
+  "footerSeeOriginal": { "message": "Ver original" },
+  "footerSeeRendered": { "message": "Ver renderizado" },
+  "popupWidthLabel": { "message": "Largura" },
+  "popupWidthNarrow": { "message": "Estreita" },
+  "popupWidthWide": { "message": "Larga" },
+  "popupWidthFull": { "message": "Total" }
+}

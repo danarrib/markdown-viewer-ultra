@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "text/markdown ও .md ফাইলকে GitHub স্টাইলে Markdown হিসেবে রেন্ডার করুন। হালকা/গাঢ় থিম। মূল ভিউ টগল করুন।" },
+  "popupThemeLabel": { "message": "থিম" },
+  "popupThemeAuto": { "message": "স্বয়ংক্রিয়" },
+  "popupThemeLight": { "message": "হালকা" },
+  "popupThemeDark": { "message": "গাঢ়" },
+  "popupCurrentPageLabel": { "message": "বর্তমান পৃষ্ঠা" },
+  "popupShowRaw": { "message": "মূল markdown দেখান" },
+  "popupShowRendered": { "message": "রেন্ডার করা দেখান" },
+  "popupStateRendered": { "message": "এখন রেন্ডার করা ভিউ দেখানো হচ্ছে।" },
+  "popupStateRaw": { "message": "এখন মূল টেক্সট দেখানো হচ্ছে।" },
+  "popupNotMarkdown": { "message": "বর্তমান পৃষ্ঠাটি Markdown নয়। একটি <code>.md</code> ফাইল বা <code>Content-Type: text/markdown</code> সহ একটি পৃষ্ঠা খুলুন।" },
+  "footerPrefix": { "message": "Markdown Viewer Ultra দ্বারা রেন্ডার করা হয়েছে" },
+  "footerSeeOriginal": { "message": "মূল দেখুন" },
+  "footerSeeRendered": { "message": "রেন্ডার করা দেখুন" },
+  "popupWidthLabel": { "message": "প্রস্থ" },
+  "popupWidthNarrow": { "message": "সংকীর্ণ" },
+  "popupWidthWide": { "message": "প্রশস্ত" },
+  "popupWidthFull": { "message": "সম্পূর্ণ" }
+}

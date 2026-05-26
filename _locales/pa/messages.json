@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "text/markdown ਜਵਾਬ ਅਤੇ .md ਫਾਈਲਾਂ ਨੂੰ GitHub-ਸਟਾਈਲ ਵਿੱਚ ਰੈਂਡਰ ਕਰੋ। ਹਲਕਾ/ਗੂੜਾ ਥੀਮ। ਅਸਲ ਦ੍ਰਿਸ਼ ਟੌਗਲ ਕਰੋ।" },
+  "popupThemeLabel": { "message": "ਥੀਮ" },
+  "popupThemeAuto": { "message": "ਆਟੋ" },
+  "popupThemeLight": { "message": "ਹਲਕਾ" },
+  "popupThemeDark": { "message": "ਗੂੜਾ" },
+  "popupCurrentPageLabel": { "message": "ਮੌਜੂਦਾ ਪੰਨਾ" },
+  "popupShowRaw": { "message": "ਅਸਲ markdown ਦਿਖਾਓ" },
+  "popupShowRendered": { "message": "ਰੈਂਡਰ ਦਿਖਾਓ" },
+  "popupStateRendered": { "message": "ਹੁਣ ਰੈਂਡਰ ਕੀਤਾ ਦ੍ਰਿਸ਼ ਦਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।" },
+  "popupStateRaw": { "message": "ਹੁਣ ਅਸਲ ਟੈਕਸਟ ਦਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।" },
+  "popupNotMarkdown": { "message": "ਮੌਜੂਦਾ ਪੰਨਾ Markdown ਨਹੀਂ ਹੈ। ਕੋਈ <code>.md</code> ਫਾਈਲ ਜਾਂ <code>Content-Type: text/markdown</code> ਵਾਲਾ ਪੰਨਾ ਖੋਲ੍ਹੋ।" },
+  "footerPrefix": { "message": "Markdown Viewer Ultra ਦੁਆਰਾ ਰੈਂਡਰ" },
+  "footerSeeOriginal": { "message": "ਅਸਲ ਦੇਖੋ" },
+  "footerSeeRendered": { "message": "ਰੈਂਡਰ ਦੇਖੋ" },
+  "popupWidthLabel": { "message": "ਚੌੜਾਈ" },
+  "popupWidthNarrow": { "message": "ਤੰਗ" },
+  "popupWidthWide": { "message": "ਚੌੜਾ" },
+  "popupWidthFull": { "message": "ਪੂਰਾ" }
+}

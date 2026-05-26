@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "يعرض استجابات text/markdown وملفات .md بتنسيق Markdown على طراز GitHub. سمة فاتحة/داكنة. تبديل العرض الأصلي." },
+  "popupThemeLabel": { "message": "السمة" },
+  "popupThemeAuto": { "message": "تلقائي" },
+  "popupThemeLight": { "message": "فاتح" },
+  "popupThemeDark": { "message": "داكن" },
+  "popupCurrentPageLabel": { "message": "الصفحة الحالية" },
+  "popupShowRaw": { "message": "إظهار markdown الأصلي" },
+  "popupShowRendered": { "message": "إظهار المعروض" },
+  "popupStateRendered": { "message": "يتم عرض الواجهة المعروضة حاليًا." },
+  "popupStateRaw": { "message": "يتم عرض النص الأصلي حاليًا." },
+  "popupNotMarkdown": { "message": "الصفحة الحالية ليست Markdown. افتح ملف <code>.md</code> أو صفحة مع <code>Content-Type: text/markdown</code>." },
+  "footerPrefix": { "message": "تم العرض بواسطة Markdown Viewer Ultra" },
+  "footerSeeOriginal": { "message": "عرض الأصلي" },
+  "footerSeeRendered": { "message": "عرض المعروض" },
+  "popupWidthLabel": { "message": "العرض" },
+  "popupWidthNarrow": { "message": "ضيق" },
+  "popupWidthWide": { "message": "واسع" },
+  "popupWidthFull": { "message": "كامل" }
+}

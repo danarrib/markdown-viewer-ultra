@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "Отображает text/markdown-ответы и .md-файлы как Markdown в стиле GitHub. Светлая/тёмная тема. Переключение исходника." },
+  "popupThemeLabel": { "message": "Тема" },
+  "popupThemeAuto": { "message": "Авто" },
+  "popupThemeLight": { "message": "Светлая" },
+  "popupThemeDark": { "message": "Тёмная" },
+  "popupCurrentPageLabel": { "message": "Текущая страница" },
+  "popupShowRaw": { "message": "Показать исходный markdown" },
+  "popupShowRendered": { "message": "Показать рендер" },
+  "popupStateRendered": { "message": "Сейчас показан отрендеренный вид." },
+  "popupStateRaw": { "message": "Сейчас показан исходный текст." },
+  "popupNotMarkdown": { "message": "Текущая страница не является Markdown. Откройте файл <code>.md</code> или страницу с <code>Content-Type: text/markdown</code>." },
+  "footerPrefix": { "message": "Отрендерено Markdown Viewer Ultra" },
+  "footerSeeOriginal": { "message": "Показать исходник" },
+  "footerSeeRendered": { "message": "Показать рендер" },
+  "popupWidthLabel": { "message": "Ширина" },
+  "popupWidthNarrow": { "message": "Узкая" },
+  "popupWidthWide": { "message": "Широкая" },
+  "popupWidthFull": { "message": "Полная" }
+}

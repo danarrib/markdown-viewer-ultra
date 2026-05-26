@@ -1,0 +1,20 @@
+{
+  "extDescription": { "message": "text/markdown yanıtlarını ve .md dosyalarını GitHub stilinde Markdown olarak görüntüler. Açık/koyu tema. Ham görünüme geç." },
+  "popupThemeLabel": { "message": "Tema" },
+  "popupThemeAuto": { "message": "Otomatik" },
+  "popupThemeLight": { "message": "Açık" },
+  "popupThemeDark": { "message": "Koyu" },
+  "popupCurrentPageLabel": { "message": "Geçerli sayfa" },
+  "popupShowRaw": { "message": "Ham markdown'u göster" },
+  "popupShowRendered": { "message": "Render edilmişi göster" },
+  "popupStateRendered": { "message": "Şu anda render edilmiş görünüm gösteriliyor." },
+  "popupStateRaw": { "message": "Şu anda ham metin gösteriliyor." },
+  "popupNotMarkdown": { "message": "Geçerli sayfa Markdown değil. Bir <code>.md</code> dosyası veya <code>Content-Type: text/markdown</code> içeren bir sayfa açın." },
+  "footerPrefix": { "message": "Markdown Viewer Ultra ile render edildi" },
+  "footerSeeOriginal": { "message": "Orijinali gör" },
+  "footerSeeRendered": { "message": "Render edilmişi gör" },
+  "popupWidthLabel": { "message": "Genişlik" },
+  "popupWidthNarrow": { "message": "Dar" },
+  "popupWidthWide": { "message": "Geniş" },
+  "popupWidthFull": { "message": "Tam" }
+}
