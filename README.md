@@ -2,6 +2,10 @@
 
 Chrome extension that renders pages with MIME type `text/markdown` (and `.md` files served as `text/plain`) as formatted Markdown with GitHub-style CSS. Toolbar popup lets you switch theme and flip between rendered and raw views.
 
+[Install on Google Chrome](https://chromewebstore.google.com/detail/markdown-viewer-ultra/kpggmaimnaljpecjkdmonkpobdeadmpm)
+
+[<img width="400" alt="install on google chrome" src="https://github.com/user-attachments/assets/78d1463a-eb04-412e-8b49-1b2777da9203" />](https://chromewebstore.google.com/detail/markdown-viewer-ultra/kpggmaimnaljpecjkdmonkpobdeadmpm)
+
 <img width="1280" height="800" alt="screenshot (1)" src="https://github.com/user-attachments/assets/08864e4a-c0b3-40d8-af59-c51eb580c1db" />
 
 ## Install (developer mode)
