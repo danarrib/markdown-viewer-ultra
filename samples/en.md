@@ -177,4 +177,17 @@ Below this line is a horizontal rule.
 
 A plain [link](https://example.com), an auto-link <https://example.com>, and a link with a [title attribute](https://example.com "Hover me").
 
-That's the tour — if everything above looks polished, you're seeing the full feature set: typography, lists, code highlighting, tables, blockquotes, and theme-aware colors.
+## Mermaid diagrams
+
+Fenced ` ```mermaid ` blocks render as diagrams, themed to match the active light/dark setting.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"yes"| C["Diagram"]
+    B -->|"no"| D["Code"]
+```
+
+---
+
+That's the tour — if everything above looks polished, you're seeing the full feature set: typography, lists, code highlighting, tables, blockquotes, theme-aware colors, and Mermaid diagrams.

@@ -177,4 +177,17 @@ Sous cette ligne se trouve une règle horizontale.
 
 Un [lien](https://example.com) simple, un auto-lien <https://example.com>, et un lien avec [attribut titre](https://example.com "Survolez-moi").
 
+---
+
+## Diagrammes Mermaid
+
+Les blocs ` ```mermaid ` sont rendus sous forme de diagrammes, adaptés au thème clair/sombre actif.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"oui"| C["Diagramme"]
+    B -->|"non"| D["Code"]
+```
+
 C'est la visite — si tout ci-dessus semble soigné, vous voyez l'ensemble complet : typographie, listes, coloration de code, tableaux, citations et couleurs adaptées au thème.

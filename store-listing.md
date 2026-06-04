@@ -49,7 +49,7 @@ Render Markdown content as formatted HTML when a page is served with the text/ma
 ## Short description (max 132 characters)
 
 ```
-Render Markdown files and text/markdown responses with syntax highlighting, light/dark themes, and adjustable width.
+Render Markdown & text/markdown with syntax highlighting, Mermaid diagrams, light/dark themes, and adjustable width.
 ```
 
 (116 chars — leaves room if you want to tweak.)
@@ -76,6 +76,7 @@ FEATURES
 • Toolbar popup with three themes: Auto (follows your OS), Light, Dark
 • Content-width picker: Narrow (920px), Wide (1440px), or Full (fills the window)
 • Syntax highlighting for ~30 common languages (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, and more) — colors follow the active theme
+• Mermaid diagrams — mermaid code blocks render as charts, matching the active theme and loaded only when a page contains one
 • Localized UI in 17 languages: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • "See original" link in the page footer to flip to the raw Markdown source, and "See rendered" to flip back
 • Same toggles are available in the popup
@@ -92,7 +93,7 @@ PRIVACY
 
 SECURITY
 • Output is sanitized with DOMPurify before being inserted into the page
-• Manifest V3, no remote code, no eval — all libraries (marked, DOMPurify, highlight.js, github-markdown-css) are bundled locally
+• Manifest V3, no remote code, no eval — all libraries (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) are bundled locally
 • Open source — review the code yourself
 
 HOW TO USE
@@ -124,6 +125,7 @@ RECURSOS
 • Popup na barra de ferramentas com três temas: Auto (segue o sistema operacional), Claro, Escuro
 • Seletor de largura do conteúdo: Estreita (920px), Larga (1440px) ou Total (preenche a janela)
 • Destaque de sintaxe para cerca de 30 linguagens comuns (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, entre outras) — as cores seguem o tema ativo
+• Diagramas Mermaid — blocos de código mermaid são renderizados como gráficos, seguindo o tema ativo e carregados apenas quando a página contém um
 • Interface localizada em 17 idiomas: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Link "Ver original" no rodapé da página para alternar para o Markdown bruto e "Ver renderizado" para voltar
 • Os mesmos controles estão disponíveis no popup
@@ -140,7 +142,7 @@ PRIVACIDADE
 
 SEGURANÇA
 • A saída é sanitizada com DOMPurify antes de ser inserida na página
-• Manifest V3, sem código remoto, sem eval — todas as bibliotecas (marked, DOMPurify, highlight.js, github-markdown-css) são incluídas localmente
+• Manifest V3, sem código remoto, sem eval — todas as bibliotecas (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) são incluídas localmente
 • Código aberto — verifique você mesmo
 
 COMO USAR
@@ -172,6 +174,7 @@ CARACTERÍSTICAS
 • Popup en la barra de herramientas con tres temas: Auto (sigue tu SO), Claro, Oscuro
 • Selector de ancho del contenido: Estrecho (920px), Amplio (1440px) o Completo (ocupa la ventana)
 • Resaltado de sintaxis para unos 30 lenguajes comunes (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, y más) — los colores siguen el tema activo
+• Diagramas Mermaid — los bloques de código mermaid se renderizan como gráficos, según el tema activo y cargados solo cuando la página contiene uno
 • Interfaz localizada en 17 idiomas: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Enlace "Ver original" en el pie de página para cambiar al Markdown sin procesar y "Ver renderizado" para volver
 • Los mismos controles están disponibles en el popup
@@ -188,7 +191,7 @@ PRIVACIDAD
 
 SEGURIDAD
 • La salida se sanea con DOMPurify antes de insertarla en la página
-• Manifest V3, sin código remoto, sin eval — todas las bibliotecas (marked, DOMPurify, highlight.js, github-markdown-css) van empaquetadas localmente
+• Manifest V3, sin código remoto, sin eval — todas las bibliotecas (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) van empaquetadas localmente
 • Código abierto — revísalo tú mismo
 
 CÓMO USAR
@@ -220,6 +223,7 @@ FONCTIONNALITÉS
 • Popup dans la barre d'outils avec trois thèmes : Auto (suit votre OS), Clair, Sombre
 • Sélecteur de largeur du contenu : Étroite (920px), Large (1440px) ou Pleine (occupe la fenêtre)
 • Coloration syntaxique pour une trentaine de langages courants (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, et d'autres) — les couleurs suivent le thème actif
+• Diagrammes Mermaid — les blocs de code mermaid sont rendus sous forme de graphiques, selon le thème actif et chargés uniquement quand une page en contient un
 • Interface localisée en 17 langues : English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Lien "Voir l'original" dans le pied de page pour basculer vers le Markdown brut, et "Voir le rendu" pour revenir
 • Les mêmes commandes sont disponibles dans le popup
@@ -236,7 +240,7 @@ CONFIDENTIALITÉ
 
 SÉCURITÉ
 • La sortie est désinfectée par DOMPurify avant d'être insérée dans la page
-• Manifest V3, pas de code distant, pas d'eval — toutes les bibliothèques (marked, DOMPurify, highlight.js, github-markdown-css) sont fournies localement
+• Manifest V3, pas de code distant, pas d'eval — toutes les bibliothèques (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) sont fournies localement
 • Open source — vérifiez le code vous-même
 
 UTILISATION
@@ -268,6 +272,7 @@ FUNKTIONEN
 • Symbolleisten-Popup mit drei Themes: Auto (folgt Ihrem Betriebssystem), Hell, Dunkel
 • Inhaltsbreite wählen: Schmal (920px), Breit (1440px) oder Voll (füllt das Fenster)
 • Syntax-Hervorhebung für rund 30 gängige Sprachen (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS und weitere) — die Farben folgen dem aktiven Theme
+• Mermaid-Diagramme — mermaid-Codeblöcke werden als Diagramme gerendert, passend zum aktiven Design und nur geladen, wenn eine Seite eines enthält
 • Lokalisierte Oberfläche in 17 Sprachen: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Link "Original anzeigen" im Seitenfuß zum Wechsel auf das Quell-Markdown und "Gerendert anzeigen" zum Zurückwechseln
 • Dieselben Schalter sind auch im Popup verfügbar
@@ -284,7 +289,7 @@ DATENSCHUTZ
 
 SICHERHEIT
 • Die Ausgabe wird mit DOMPurify desinfiziert, bevor sie in die Seite eingefügt wird
-• Manifest V3, kein Remote-Code, kein eval — alle Bibliotheken (marked, DOMPurify, highlight.js, github-markdown-css) sind lokal gebündelt
+• Manifest V3, kein Remote-Code, kein eval — alle Bibliotheken (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) sind lokal gebündelt
 • Open Source — Code selbst überprüfbar
 
 VERWENDUNG
@@ -316,6 +321,7 @@ CARATTERISTICHE
 • Popup nella barra degli strumenti con tre temi: Auto (segue il sistema operativo), Chiaro, Scuro
 • Selettore della larghezza del contenuto: Stretta (920px), Larga (1440px) o Piena (riempie la finestra)
 • Evidenziazione della sintassi per circa 30 linguaggi comuni (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, e altri) — i colori seguono il tema attivo
+• Diagrammi Mermaid — i blocchi di codice mermaid vengono resi come grafici, in base al tema attivo e caricati solo quando una pagina ne contiene uno
 • Interfaccia localizzata in 17 lingue: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Link "Mostra originale" nel piè di pagina per passare al Markdown originale e "Mostra renderizzato" per tornare
 • Gli stessi controlli sono disponibili nel popup
@@ -332,7 +338,7 @@ PRIVACY
 
 SICUREZZA
 • L'output viene sanitizzato con DOMPurify prima di essere inserito nella pagina
-• Manifest V3, nessun codice remoto, nessun eval — tutte le librerie (marked, DOMPurify, highlight.js, github-markdown-css) sono incluse localmente
+• Manifest V3, nessun codice remoto, nessun eval — tutte le librerie (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) sono incluse localmente
 • Open source — puoi controllare il codice tu stesso
 
 COME USARE
@@ -364,6 +370,7 @@ Markdown Viewer Ultra は、Chrome が通常テキストとして表示するペ
 • ツールバーのポップアップに 3 つのテーマ：自動（OS に追従）、ライト、ダーク
 • コンテンツ幅の選択：狭い（920px）、広い（1440px）、全幅（ウィンドウいっぱい）
 • 約 30 種類の主要言語に対応したシンタックスハイライト（JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS など）— 色はアクティブなテーマに追従
+• Mermaid ダイアグラム — mermaid コードブロックを図として描画。現在のテーマに合わせ、ダイアグラムを含むページでのみ読み込みます
 • 17 言語にローカライズ：English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • ページのフッターにある「原文を表示」リンクで Markdown の原文に切り替え、「レンダリングを表示」で戻る
 • 同じ操作はポップアップからも可能
@@ -380,7 +387,7 @@ Markdown Viewer Ultra は、Chrome が通常テキストとして表示するペ
 
 セキュリティ
 • 出力はページに挿入される前に DOMPurify でサニタイズされます
-• Manifest V3、リモートコードなし、eval なし — すべてのライブラリ（marked, DOMPurify, highlight.js, github-markdown-css）は同梱
+• Manifest V3、リモートコードなし、eval なし — すべてのライブラリ（marked, DOMPurify, highlight.js, Mermaid, github-markdown-css）は同梱
 • オープンソース — コードはご自身でご確認いただけます
 
 使い方
@@ -412,6 +419,7 @@ Markdown Viewer Ultra 自动将 Chrome 原本以纯文本显示的页面变成�
 • 工具栏弹出窗口提供三种主题：自动（跟随系统）、亮色、暗色
 • 内容宽度选择器：窄（920px）、宽（1440px）或全宽（填满窗口）
 • 对约 30 种常见语言的语法高亮（JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS 等）——颜色跟随当前主题
+• Mermaid 图表 — mermaid 代码块会渲染为图表，跟随当前主题，并仅在页面包含图表时才加载
 • 17 种语言界面：English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • 页脚的"查看原文"链接可切换到原始 Markdown，"查看渲染"可返回
 • 弹出窗口中也提供相同的开关
@@ -428,7 +436,7 @@ Markdown Viewer Ultra 自动将 Chrome 原本以纯文本显示的页面变成�
 
 安全
 • 输出在插入页面前会使用 DOMPurify 进行净化
-• Manifest V3，无远程代码，无 eval——所有库（marked, DOMPurify, highlight.js, github-markdown-css）均本地打包
+• Manifest V3，无远程代码，无 eval——所有库（marked, DOMPurify, highlight.js, Mermaid, github-markdown-css）均本地打包
 • 开源——欢迎自行查阅代码
 
 如何使用
@@ -460,6 +468,7 @@ FUNCIONALIDADES
 • Popup na barra de ferramentas com três temas: Auto (segue o seu SO), Claro, Escuro
 • Seletor de largura do conteúdo: Estreita (920px), Larga (1440px) ou Total (preenche a janela)
 • Realce de sintaxe para cerca de 30 linguagens comuns (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, entre outras) — as cores seguem o tema ativo
+• Diagramas Mermaid — os blocos de código mermaid são apresentados como gráficos, seguindo o tema ativo e carregados apenas quando a página contém um
 • Interface localizada em 17 idiomas: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Ligação "Ver original" no rodapé da página para alternar para o Markdown bruto e "Ver renderizado" para voltar
 • Os mesmos controlos estão disponíveis no popup
@@ -476,7 +485,7 @@ PRIVACIDADE
 
 SEGURANÇA
 • A saída é sanitizada com DOMPurify antes de ser inserida na página
-• Manifest V3, sem código remoto, sem eval — todas as bibliotecas (marked, DOMPurify, highlight.js, github-markdown-css) estão incluídas localmente
+• Manifest V3, sem código remoto, sem eval — todas as bibliotecas (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) estão incluídas localmente
 • Código aberto — verifique você mesmo
 
 COMO USAR
@@ -508,6 +517,7 @@ Markdown Viewer Ultra 自動將 Chrome 原本以純文字顯示的頁面變成�
 • 工具列彈出視窗提供三種主題：自動（跟隨系統）、亮色、暗色
 • 內容寬度選擇器：窄（920px）、寬（1440px）或全寬（填滿視窗）
 • 對約 30 種常見語言的語法上色（JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS 等）——色彩跟隨目前主題
+• Mermaid 圖表 — mermaid 程式碼區塊會算繪為圖表，跟隨目前主題，並僅在頁面包含圖表時才載入
 • 17 種語言介面：English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • 頁腳的「檢視原文」連結可切換到原始 Markdown，「檢視渲染」可返回
 • 彈出視窗中也提供相同的開關
@@ -524,7 +534,7 @@ Markdown Viewer Ultra 自動將 Chrome 原本以純文字顯示的頁面變成�
 
 安全
 • 輸出在插入頁面前會用 DOMPurify 進行淨化
-• Manifest V3，無遠端程式碼，無 eval——所有函式庫（marked, DOMPurify, highlight.js, github-markdown-css）皆本機封裝
+• Manifest V3，無遠端程式碼，無 eval——所有函式庫（marked, DOMPurify, highlight.js, Mermaid, github-markdown-css）皆本機封裝
 • 開源——歡迎自行查閱程式碼
 
 如何使用
@@ -556,6 +566,7 @@ Markdown Viewer Ultra автоматически превращает любую
 • Всплывающее окно на панели инструментов с тремя темами: Авто (следует ОС), Светлая, Тёмная
 • Выбор ширины контента: Узкая (920px), Широкая (1440px) или Полная (заполняет окно)
 • Подсветка синтаксиса для ~30 распространённых языков (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS и другие) — цвета следуют текущей теме
+• Диаграммы Mermaid — блоки кода mermaid отображаются как диаграммы, подстраиваются под активную тему и загружаются только когда есть на странице
 • Локализованный интерфейс на 17 языках: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Ссылка «Показать исходник» в подвале страницы для переключения на исходный Markdown и «Показать рендер» для возврата
 • Те же переключатели доступны во всплывающем окне
@@ -572,7 +583,7 @@ Markdown Viewer Ultra автоматически превращает любую
 
 БЕЗОПАСНОСТЬ
 • Вывод очищается DOMPurify перед вставкой в страницу
-• Manifest V3, никакого удалённого кода, никакого eval — все библиотеки (marked, DOMPurify, highlight.js, github-markdown-css) включены локально
+• Manifest V3, никакого удалённого кода, никакого eval — все библиотеки (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) включены локально
 • Открытый исходный код — проверьте сами
 
 КАК ПОЛЬЗОВАТЬСЯ
@@ -604,6 +615,7 @@ Markdown Viewer Ultra स्वचालित रूप से उन पेज
 • टूलबार पॉपअप में तीन थीम: स्वचालित (आपके OS का अनुसरण), हल्की, गहरी
 • कंटेंट चौड़ाई चयनकर्ता: संकीर्ण (920px), चौड़ी (1440px) या पूर्ण (विंडो भर देती है)
 • लगभग 30 सामान्य भाषाओं के लिए सिंटैक्स हाइलाइटिंग (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, आदि) — रंग सक्रिय थीम का अनुसरण करते हैं
+• Mermaid आरेख — mermaid कोड ब्लॉक चार्ट के रूप में रेंडर होते हैं, सक्रिय थीम के अनुसार, और केवल तभी लोड होते हैं जब पेज में कोई हो
 • 17 भाषाओं में स्थानीयकृत इंटरफ़ेस: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • पेज फ़ुटर में "मूल देखें" लिंक से कच्चे Markdown पर जाने का विकल्प और "रेंडर देखें" से वापस लौटने का
 • वही टॉगल पॉपअप में भी उपलब्ध हैं
@@ -620,7 +632,7 @@ Markdown Viewer Ultra स्वचालित रूप से उन पेज
 
 सुरक्षा
 • आउटपुट को पेज में डालने से पहले DOMPurify से साफ़ किया जाता है
-• Manifest V3, कोई रिमोट कोड नहीं, कोई eval नहीं — सभी लाइब्रेरीज़ (marked, DOMPurify, highlight.js, github-markdown-css) स्थानीय रूप से बंडल हैं
+• Manifest V3, कोई रिमोट कोड नहीं, कोई eval नहीं — सभी लाइब्रेरीज़ (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) स्थानीय रूप से बंडल हैं
 • ओपन सोर्स — कोड स्वयं देखें
 
 उपयोग कैसे करें
@@ -652,6 +664,7 @@ Markdown Viewer Ultra স্বয়ংক্রিয়ভাবে যেক
 • টুলবার পপআপে তিনটি থিম: স্বয়ংক্রিয় (আপনার OS অনুসরণ করে), হালকা, গাঢ়
 • বিষয়বস্তু প্রস্থ নির্বাচক: সংকীর্ণ (920px), প্রশস্ত (1440px) বা সম্পূর্ণ (উইন্ডো পূর্ণ করে)
 • ~30টি সাধারণ ভাষার জন্য সিনট্যাক্স হাইলাইটিং (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, এবং আরও) — রঙ সক্রিয় থিম অনুসরণ করে
+• Mermaid ডায়াগ্রাম — mermaid কোড ব্লক চার্ট হিসেবে রেন্ডার হয়, সক্রিয় থিম অনুযায়ী, এবং কেবল পেজে থাকলে তবেই লোড হয়
 • 17টি ভাষায় স্থানীয়কৃত UI: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • পৃষ্ঠার ফুটারে "মূল দেখুন" লিঙ্ক কাঁচা Markdown-এ যেতে এবং "রেন্ডার দেখুন" ফিরে আসতে
 • একই টগল পপআপেও উপলব্ধ
@@ -668,7 +681,7 @@ Markdown Viewer Ultra স্বয়ংক্রিয়ভাবে যেক
 
 নিরাপত্তা
 • আউটপুট পৃষ্ঠায় যোগ করার আগে DOMPurify দিয়ে স্যানিটাইজ করা হয়
-• Manifest V3, কোনো দূরবর্তী কোড নেই, কোনো eval নেই — সমস্ত লাইব্রেরি (marked, DOMPurify, highlight.js, github-markdown-css) স্থানীয়ভাবে বান্ডেল করা
+• Manifest V3, কোনো দূরবর্তী কোড নেই, কোনো eval নেই — সমস্ত লাইব্রেরি (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) স্থানীয়ভাবে বান্ডেল করা
 • ওপেন সোর্স — কোড নিজেই দেখুন
 
 কীভাবে ব্যবহার করবেন
@@ -700,6 +713,7 @@ Markdown Viewer Ultra ਆਪਣੇ ਆਪ ਕਿਸੇ ਵੀ ਪੰਨੇ ਨ�
 • ਟੂਲਬਾਰ ਪੌਪਅੱਪ ਵਿੱਚ ਤਿੰਨ ਥੀਮ: ਆਟੋ (ਤੁਹਾਡੇ OS ਦੇ ਮਗਰ ਚਲਦਾ ਹੈ), ਹਲਕਾ, ਗੂੜਾ
 • ਸਮੱਗਰੀ ਚੌੜਾਈ ਚੋਣਕਾਰ: ਤੰਗ (920px), ਚੌੜਾ (1440px) ਜਾਂ ਪੂਰਾ (ਵਿੰਡੋ ਭਰਦਾ ਹੈ)
 • ਲਗਭਗ 30 ਆਮ ਭਾਸ਼ਾਵਾਂ ਲਈ ਸਿੰਟੈਕਸ ਹਾਈਲਾਈਟਿੰਗ (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, ਆਦਿ) — ਰੰਗ ਮੌਜੂਦਾ ਥੀਮ ਦੇ ਮਗਰ ਚਲਦੇ ਹਨ
+• Mermaid ਡਾਇਆਗ੍ਰਾਮ — mermaid ਕੋਡ ਬਲਾਕ ਚਾਰਟ ਵਜੋਂ ਰੈਂਡਰ ਹੁੰਦੇ ਹਨ, ਸਰਗਰਮ ਥੀਮ ਮੁਤਾਬਕ, ਅਤੇ ਸਿਰਫ਼ ਤਾਂ ਲੋਡ ਹੁੰਦੇ ਹਨ ਜਦੋਂ ਪੇਜ ਵਿੱਚ ਕੋਈ ਹੋਵੇ
 • 17 ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਸਥਾਨਕ ਕੀਤਾ ਇੰਟਰਫੇਸ: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • ਪੰਨੇ ਦੇ ਫੁੱਟਰ ਵਿੱਚ "ਅਸਲ ਦੇਖੋ" ਲਿੰਕ ਕੱਚੇ Markdown ਉੱਤੇ ਜਾਣ ਲਈ ਅਤੇ "ਰੈਂਡਰ ਦੇਖੋ" ਵਾਪਸ ਆਉਣ ਲਈ
 • ਉਹੀ ਟੌਗਲ ਪੌਪਅੱਪ ਵਿੱਚ ਵੀ ਉਪਲਬਧ ਹਨ
@@ -716,7 +730,7 @@ Markdown Viewer Ultra ਆਪਣੇ ਆਪ ਕਿਸੇ ਵੀ ਪੰਨੇ ਨ�
 
 ਸੁਰੱਖਿਆ
 • ਆਉਟਪੁੱਟ ਨੂੰ ਪੰਨੇ ਵਿੱਚ ਪਾਉਣ ਤੋਂ ਪਹਿਲਾਂ DOMPurify ਨਾਲ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਜਾਂਦਾ ਹੈ
-• Manifest V3, ਕੋਈ ਰਿਮੋਟ ਕੋਡ ਨਹੀਂ, ਕੋਈ eval ਨਹੀਂ — ਸਾਰੀਆਂ ਲਾਇਬ੍ਰੇਰੀਆਂ (marked, DOMPurify, highlight.js, github-markdown-css) ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਬੰਡਲ ਹਨ
+• Manifest V3, ਕੋਈ ਰਿਮੋਟ ਕੋਡ ਨਹੀਂ, ਕੋਈ eval ਨਹੀਂ — ਸਾਰੀਆਂ ਲਾਇਬ੍ਰੇਰੀਆਂ (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਬੰਡਲ ਹਨ
 • ਓਪਨ ਸੋਰਸ — ਕੋਡ ਖੁਦ ਦੇਖੋ
 
 ਵਰਤੋਂ ਕਿਵੇਂ ਕਰੀਏ
@@ -748,6 +762,7 @@ NE RENDER EDİLİR
 • Araç çubuğu açılır penceresinde üç tema: Otomatik (işletim sisteminizi izler), Açık, Koyu
 • İçerik genişliği seçici: Dar (920px), Geniş (1440px) veya Tam (pencereyi doldurur)
 • Yaklaşık 30 yaygın dil için sözdizimi vurgusu (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS, ve daha fazlası) — renkler etkin temayı izler
+• Mermaid diyagramları — mermaid kod blokları grafik olarak işlenir, etkin temaya uyar ve yalnızca sayfada varsa yüklenir
 • 17 dilde yerelleştirilmiş arayüz: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • Sayfa altbilgisindeki "Orijinali gör" bağlantısı ham Markdown'a geçmek için ve geri dönmek için "Render edilmişi gör"
 • Aynı geçişler açılır pencerede de mevcuttur
@@ -764,7 +779,7 @@ GİZLİLİK
 
 GÜVENLİK
 • Çıktı, sayfaya eklenmeden önce DOMPurify ile temizlenir
-• Manifest V3, uzak kod yok, eval yok — tüm kütüphaneler (marked, DOMPurify, highlight.js, github-markdown-css) yerel olarak paketlenmiştir
+• Manifest V3, uzak kod yok, eval yok — tüm kütüphaneler (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) yerel olarak paketlenmiştir
 • Açık kaynak — kodu kendiniz inceleyin
 
 NASIL KULLANILIR
@@ -796,6 +811,7 @@ Markdown Viewer Ultra הופך אוטומטית כל דף ש-Chrome היה מצ�
 • חלון קופץ בסרגל הכלים עם שלוש ערכות נושא: אוטומטי (עוקב אחר מערכת ההפעלה), בהיר, כהה
 • בורר רוחב התוכן: צר (920px), רחב (1440px) או מלא (ממלא את החלון)
 • הדגשת תחביר ל-30 שפות נפוצות (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS ועוד) — הצבעים עוקבים אחר ערכת הנושא הפעילה
+• תרשימי Mermaid — בלוקי קוד mermaid מוצגים כתרשימים, בהתאם לערכת הנושא הפעילה ונטענים רק כאשר הם קיימים בעמוד
 • ממשק מתורגם ל-17 שפות: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • קישור "הצג מקור" בכותרת התחתונה של הדף למעבר ל-Markdown הגולמי ו-"הצג מעובד" לחזרה
 • אותם מתגים זמינים גם בחלון הקופץ
@@ -812,7 +828,7 @@ Markdown Viewer Ultra הופך אוטומטית כל דף ש-Chrome היה מצ�
 
 אבטחה
 • הפלט מחוטא באמצעות DOMPurify לפני שהוא משולב בדף
-• Manifest V3, ללא קוד מרוחק, ללא eval — כל הספריות (marked, DOMPurify, highlight.js, github-markdown-css) ארוזות מקומית
+• Manifest V3, ללא קוד מרוחק, ללא eval — כל הספריות (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) ארוזות מקומית
 • קוד פתוח — בדקו את הקוד בעצמכם
 
 כיצד להשתמש
@@ -844,6 +860,7 @@ Markdown Viewer Ultra הופך אוטומטית כל דף ש-Chrome היה מצ�
 • نافذة منبثقة في شريط الأدوات مع ثلاث سمات: تلقائي (يتبع نظام التشغيل)، فاتح، داكن
 • محدد عرض المحتوى: ضيق (920px) أو واسع (1440px) أو كامل (يملأ النافذة)
 • تمييز بناء الجملة لحوالي 30 لغة شائعة (JavaScript, TypeScript, Python, Go, Rust, Ruby, C/C++/C#, Java, SQL, Bash, JSON, YAML, HTML, CSS وغيرها) — الألوان تتبع السمة النشطة
+• مخططات Mermaid — تُعرَض كتل كود mermaid كرسوم بيانية، وفقًا للسمة النشطة، ولا تُحمَّل إلا عند وجودها في الصفحة
 • واجهة مترجمة إلى 17 لغة: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 • رابط "عرض الأصلي" في تذييل الصفحة للتبديل إلى Markdown الخام و"عرض المعروض" للعودة
 • نفس مفاتيح التبديل متاحة في النافذة المنبثقة
@@ -860,7 +877,7 @@ Markdown Viewer Ultra הופך אוטומטית כל דף ש-Chrome היה מצ�
 
 الأمان
 • يتم تنظيف الإخراج باستخدام DOMPurify قبل إدراجه في الصفحة
-• Manifest V3، بدون كود بعيد، بدون eval — جميع المكتبات (marked, DOMPurify, highlight.js, github-markdown-css) مُدمجة محليًا
+• Manifest V3، بدون كود بعيد، بدون eval — جميع المكتبات (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) مُدمجة محليًا
 • مفتوح المصدر — تحقق من الكود بنفسك
 
 كيفية الاستخدام
@@ -894,7 +911,7 @@ The extension must run on any URL because the response Content-Type (text/markdo
 
 **Remote code use**
 ```
-No. All libraries (marked, DOMPurify, highlight.js, github-markdown-css) are vendored locally in the extension package. No code is fetched at runtime.
+No. All libraries (marked, DOMPurify, highlight.js, Mermaid, github-markdown-css) are vendored locally in the extension package. No code is fetched at runtime.
 ```
 
 ---
@@ -958,13 +975,26 @@ Required before submission:
 | Marquee promo (optional) | 1400×560 PNG       | ✅ `store-assets/promo-1400x560.png` |
 | Privacy policy URL    | public webpage        | ✅ `https://github.com/danarrib/markdown-viewer-ultra/blob/master/PRIVACY.md` |
 
-**Regenerating screenshots** — `scripts/take-screenshots.js` drives a real Chromium with the unpacked extension loaded and saves three 1280×800 PNGs per locale (sample dark/narrow, sample light/wide, raw view light/narrow) under `store-assets/screenshots/<locale>/`. The script iterates all 17 supported locales, using `samples/<locale>.md` as the source. Run with `cd scripts && npm install && npm run screenshots`. Companion scripts: `npm run popup-screenshots` (raw 280px popup PNGs) and `npm run popup-cards` (1280×800 popup cards on a gradient background).
+**Regenerating screenshots** — `scripts/take-screenshots.js` drives a real Chromium with the unpacked extension loaded and saves four 1280×800 PNGs per locale (sample dark/narrow, sample light/wide, raw view light/narrow, Mermaid diagram dark/narrow) under `store-assets/screenshots/<locale>/`. The script iterates all 17 supported locales, using `samples/<locale>.md` as the source. Run with `cd scripts && npm install && npm run screenshots`. Companion scripts: `npm run popup-screenshots` (raw 280px popup PNGs) and `npm run popup-cards` (1280×800 popup cards on a gradient background).
 
 ---
 
 ## Changelog
 
 Format follows [Keep a Changelog](https://keepachangelog.com/). Versions are git tags on `master`.
+
+### [0.4.0] — 2026-06-04
+
+**Added**
+- Mermaid diagram rendering — fenced ` ```mermaid ` blocks render as SVG charts via Mermaid 11.6.0, themed to match the active light/dark setting and re-rendered on theme flip
+- Mermaid is lazy-loaded (~2.7MB) only on pages that actually contain a diagram, keeping non-diagram pages unaffected
+- Per-locale `samples/<dir>.md` fixtures gained a localized Mermaid section for screenshots
+- `scripts/take-screenshots.js` now also captures a Mermaid diagram shot (`d-mermaid-dark-narrow.png`) per locale
+
+**Technical**
+- Mermaid (`mermaid.min.js`) + a `mermaid-bootstrap.js` initializer are exposed via `web_accessible_resources` and injected into the page on demand — no new permissions required
+- Diagram source is rendered with Mermaid `securityLevel: 'strict'`
+- Known limitation: a strict page Content-Security-Policy (`script-src 'self'`) can block the injected script; the block then falls back to showing the diagram source. Local `.md` files and `text/plain` sources are unaffected
 
 ### [0.3.0] — 2026-05-26
 

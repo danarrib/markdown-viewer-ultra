@@ -1,6 +1,6 @@
 # Markdown Viewer Ultra
 
-Chrome extension that renders pages with MIME type `text/markdown` (and `.md` files served as `text/plain`) as formatted Markdown with GitHub-style CSS. Toolbar popup lets you switch theme and flip between rendered and raw views.
+Chrome extension that renders pages with MIME type `text/markdown` (and `.md` files served as `text/plain`) as formatted Markdown with GitHub-style CSS — including syntax highlighting and Mermaid diagrams. Toolbar popup lets you switch theme and flip between rendered and raw views.
 
 [Install on Google Chrome](https://chromewebstore.google.com/detail/markdown-viewer-ultra/kpggmaimnaljpecjkdmonkpobdeadmpm)
 
@@ -22,11 +22,12 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 - GitHub-flavored Markdown via [marked](https://marked.js.org/)
 - HTML sanitized with [DOMPurify](https://github.com/cure53/DOMPurify)
 - Syntax highlighting via [highlight.js](https://highlightjs.org/) Common build (~30 languages) — code colors follow the active theme
+- Mermaid diagrams: ` ```mermaid ` blocks render as SVG via [Mermaid](https://mermaid.js.org/) (lazy-loaded only on pages that contain one), theme-synced and re-rendered on theme flip
 - Theme override: **Auto** (follows OS), **Light**, **Dark** — synced via `chrome.storage.sync`
 - Toggle between rendered and raw view per page:
   - Footer link on rendered page: **See original** / **See rendered**
   - Toolbar popup button: same toggle
-- Localized UI in 8 languages: English, Português (BR), Español, Français, Deutsch, Italiano, 日本語, 简体中文
+- Localized UI in 17 languages: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 - Toolbar icon (16/32/48/128 PNGs)
 - Opens the feedback issue when uninstalled
 
@@ -43,6 +44,7 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 - Theme override: re-declares the same CSS variables `github-markdown.css` defines inside its `@media (prefers-color-scheme: …)` blocks, but under `html.mvu-force-{dark,light} .markdown-body` selectors. Higher specificity wins, so the override beats the OS preference.
 - Popup ↔ content script communication: `chrome.tabs.sendMessage` carries `getState` / `toggleRender` messages. If the active tab isn't a markdown page, the popup shows a "Not a markdown page" notice instead of the toggle button.
 - Theme preference lives in `chrome.storage.sync` (`{ darkMode: "auto" | "light" | "dark" }`). The content script listens to `chrome.storage.onChanged` so flipping the popup updates every open markdown tab live.
+- Mermaid: ` ```mermaid ` code blocks become `<div class="mvu-mermaid">` nodes holding the diagram source. The first time a page has one, `mermaid.min.js` + `mermaid-bootstrap.js` (both declared in `web_accessible_resources`) are injected and run in the page **main world** with `securityLevel: "strict"`. The bootstrap picks its theme from the `mvu-force-*` classes and re-renders on a `mvu-mermaid-render` DOM event that `content.js` dispatches on raw/render toggle and theme flip. No extra permissions — only `storage`.
 
 ## File layout
 
@@ -57,18 +59,22 @@ md-viewer-ultra/
 ├── marked.min.js         # Vendored marked@14.1.3
 ├── purify.min.js         # Vendored dompurify@3.1.7
 ├── highlight.min.js      # Vendored highlight.js@11.10.0 (Common build)
+├── mermaid.min.js        # Vendored mermaid@11.6.0 (UMD) — lazy-injected on demand
+├── mermaid-bootstrap.js  # Main-world init/render of .mermaid nodes, theme-synced
 ├── popup.html            # Toolbar popup
 ├── popup.js              # Popup logic (theme + toggle + i18n + version)
 ├── popup.css             # Popup styling
 ├── icons/                # 16/32/48/128 PNGs
-├── _locales/             # i18n strings — en (default) + 7 translations
+├── _locales/             # i18n strings — en (default) + 16 translations
 │   ├── en/messages.json
 │   ├── pt_BR/messages.json
 │   └── …
 ├── store-assets/         # Web Store promo tile, marquee, screenshots (not shipped)
-├── sample.md             # Test fixture covering all formatting
+├── sample.md             # Test fixture covering all formatting (incl. Mermaid)
+├── samples/              # Per-locale showcase fixtures (samples/<locale>.md)
 ├── PRIVACY.md            # Privacy policy (Chrome Web Store URL)
 ├── store-listing.md      # Web Store listing copy + submission flow
+├── CLAUDE.md             # Guidance for Claude Code
 └── README.md
 ```
 
@@ -77,6 +83,7 @@ md-viewer-ultra/
 - Render/raw toggle state is per-tab and resets on reload (intentional — the page already starts in rendered view).
 - Servers that send `text/html` for markdown won't be detected (very rare).
 - Syntax highlighting uses the Common build (~30 languages). For rarer languages (Erlang, Nim, Crystal, etc.) you'll get plain-text fallback.
+- Mermaid renders in the page's main world, so a strict page Content-Security-Policy (`script-src 'self'`) can block it; the block then falls back to showing the diagram source. Local `.md` files and raw `text/plain` sources (e.g. raw.githubusercontent.com) are unaffected.
 
 <img width="1280" height="800" alt="screenshot (3)" src="https://github.com/user-attachments/assets/13fa1dcd-add2-4612-8b14-a2d034325683" />
 
@@ -87,4 +94,5 @@ curl -sSL -o marked.min.js       https://cdn.jsdelivr.net/npm/marked@14.1.3/mark
 curl -sSL -o github-markdown.css https://cdn.jsdelivr.net/npm/github-markdown-css@5.6.1/github-markdown.css
 curl -sSL -o purify.min.js       https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js
 curl -sSL -o highlight.min.js    https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js
+curl -sSL -o mermaid.min.js      https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js
 ```

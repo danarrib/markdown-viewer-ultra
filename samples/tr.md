@@ -177,4 +177,17 @@ Bu satırın altında yatay bir çizgi var.
 
 Sade bir [bağlantı](https://example.com), otomatik bağlantı <https://example.com> ve [başlık özniteliği](https://example.com "Üzerine gel") olan bir bağlantı.
 
+---
+
+## Mermaid diyagramları
+
+` ```mermaid ` blokları, etkin açık/koyu temaya uygun şekilde diyagram olarak işlenir.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"evet"| C["Diyagram"]
+    B -->|"hayır"| D["Kod"]
+```
+
 İşte tur — yukarıdakilerin hepsi düzgün görünüyorsa tüm özellik setini görüyorsunuz: tipografi, listeler, kod vurgusu, tablolar, alıntılar ve temaya uyan renkler.

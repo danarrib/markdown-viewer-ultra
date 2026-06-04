@@ -177,4 +177,17 @@ Abaixo desta linha há uma régua horizontal.
 
 Um [link](https://example.com) simples, um auto-link <https://example.com>, e um link com [atributo de título](https://example.com "Passe o mouse aqui").
 
+---
+
+## Diagramas Mermaid
+
+Blocos ` ```mermaid ` são renderizados como diagramas, seguindo o tema claro/escuro ativo.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"sim"| C["Diagrama"]
+    B -->|"não"| D["Código"]
+```
+
 Esse é o tour — se tudo acima parece elegante, você está vendo o conjunto completo de recursos: tipografia, listas, realce de código, tabelas, citações e cores que seguem o tema.

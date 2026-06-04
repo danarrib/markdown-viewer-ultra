@@ -177,4 +177,17 @@ Unter dieser Zeile befindet sich eine horizontale Linie.
 
 Ein einfacher [Link](https://example.com), ein Auto-Link <https://example.com> und ein Link mit [Titel-Attribut](https://example.com "Mit der Maus überfahren").
 
+---
+
+## Mermaid-Diagramme
+
+Mit ` ```mermaid ` ausgezeichnete Blöcke werden als Diagramme gerendert, passend zum aktiven Hell-/Dunkel-Design.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"ja"| C["Diagramm"]
+    B -->|"nein"| D["Code"]
+```
+
 Das war die Tour — wenn alles oben gepflegt aussieht, sehen Sie das volle Funktionsspektrum: Typografie, Listen, Code-Hervorhebung, Tabellen, Zitate und themenabhängige Farben.

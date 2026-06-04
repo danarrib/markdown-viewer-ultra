@@ -177,4 +177,17 @@ Sotto questa riga c'è un righello orizzontale.
 
 Un [link](https://example.com) semplice, un auto-link <https://example.com>, e un link con [attributo titolo](https://example.com "Passa qui").
 
+---
+
+## Diagrammi Mermaid
+
+I blocchi ` ```mermaid ` vengono resi come diagrammi, in base al tema chiaro/scuro attivo.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"sì"| C["Diagramma"]
+    B -->|"no"| D["Codice"]
+```
+
 Ecco il tour — se tutto quanto sopra appare ben curato, stai vedendo l'intero set di funzionalità: tipografia, liste, evidenziazione del codice, tabelle, citazioni e colori che seguono il tema.

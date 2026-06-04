@@ -177,4 +177,31 @@ Below this line is a horizontal rule.
 
 A plain [link](https://example.com), an auto-link <https://example.com>, and a link with a [title attribute](https://example.com "Hover me").
 
-That's the tour — if everything above looks polished, you're seeing the full feature set: typography, lists, code highlighting, tables, blockquotes, and theme-aware colors.
+## Mermaid diagrams
+
+Fenced ` ```mermaid ` blocks render as diagrams (theme follows the active light/dark setting):
+
+```mermaid
+flowchart LR
+    A[Markdown file] --> B{Mermaid block?}
+    B -- yes --> C[Render diagram]
+    B -- no --> D[Highlight code]
+    C --> E[Article]
+    D --> E
+```
+
+A sequence diagram:
+
+```mermaid
+sequenceDiagram
+    participant P as Page
+    participant C as content.js
+    participant M as Mermaid
+    P->>C: markdown detected
+    C->>M: lazy-load + render
+    M-->>P: SVG diagram
+```
+
+---
+
+That's the tour — if everything above looks polished, you're seeing the full feature set: typography, lists, code highlighting, tables, blockquotes, theme-aware colors, and Mermaid diagrams.

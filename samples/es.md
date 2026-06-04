@@ -177,4 +177,17 @@ Debajo de esta línea hay una regla horizontal.
 
 Un [enlace](https://example.com) simple, un auto-enlace <https://example.com> y un enlace con [atributo de título](https://example.com "Pasa el cursor").
 
+---
+
+## Diagramas Mermaid
+
+Los bloques ` ```mermaid ` se renderizan como diagramas, según el tema claro/oscuro activo.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"sí"| C["Diagrama"]
+    B -->|"no"| D["Código"]
+```
+
 Ese fue el recorrido — si todo lo de arriba se ve cuidado, estás viendo el conjunto completo de funciones: tipografía, listas, resaltado de código, tablas, citas y colores que siguen el tema.

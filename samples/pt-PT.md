@@ -177,4 +177,17 @@ Abaixo desta linha está uma régua horizontal.
 
 Uma [ligação](https://example.com) simples, uma auto-ligação <https://example.com>, e uma ligação com [atributo de título](https://example.com "Passe aqui").
 
+---
+
+## Diagramas Mermaid
+
+Os blocos ` ```mermaid ` são apresentados como diagramas, seguindo o tema claro/escuro ativo.
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"sim"| C["Diagrama"]
+    B -->|"não"| D["Código"]
+```
+
 Esta foi a visita guiada — se tudo o que vê acima parece bem apresentado, está a ver o conjunto completo de funcionalidades: tipografia, listas, realce de código, tabelas, citações e cores que seguem o tema.

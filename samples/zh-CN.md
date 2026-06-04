@@ -177,4 +177,17 @@ find . -name '*.md' -size +1k -print0 \
 
 一个普通的[链接](https://example.com)，一个自动链接 <https://example.com>，以及一个带[标题属性的链接](https://example.com "悬停查看")。
 
+---
+
+## Mermaid 图表
+
+` ```mermaid ` 代码块会渲染为图表，并跟随当前的浅色/深色主题。
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"是"| C["图表"]
+    B -->|"否"| D["代码"]
+```
+
 游览结束 — 如果上面一切都显示得很精致，那么你正在体验完整的功能集：排版、列表、代码高亮、表格、引用，以及随主题变化的颜色。

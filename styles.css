@@ -143,6 +143,21 @@ html.mvu-force-light .mvu-footer a { color: #0969da; }
   }
 }
 
+/* === Mermaid diagrams ===
+   Holds the diagram source until mermaid-bootstrap.js replaces it with an SVG.
+   Centered, horizontally scrollable on overflow; SVG scales to the column. */
+
+.mvu-article .mvu-mermaid {
+  margin: 1rem 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.mvu-article .mvu-mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
 /* === Forced theme overrides ===
    These re-declare the same CSS variables that github-markdown.css ships
    inside @media (prefers-color-scheme: ...) blocks, but unconditionally

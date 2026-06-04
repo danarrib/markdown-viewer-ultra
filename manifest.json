@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Markdown Viewer Ultra",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "default_locale": "en",
   "description": "__MSG_extDescription__",
   "permissions": ["storage"],
@@ -31,6 +31,12 @@
       "css": ["github-markdown.css", "hljs-theme.css", "styles.css"],
       "run_at": "document_end",
       "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["mermaid.min.js", "mermaid-bootstrap.js"],
+      "matches": ["<all_urls>"]
     }
   ]
 }

@@ -14,6 +14,50 @@
   marked.setOptions({ gfm: true, breaks: false });
 
   let isRendered = true;
+  let mermaidInjected = false;
+
+  // Mermaid is ~2.7MB, so it's only injected the first time a page is found to
+  // contain a ```mermaid block. Both files are loaded into the page main world
+  // (where mermaid attaches globalThis.mermaid); the bootstrap then renders.
+  // Subsequent renders (toggle / theme flip) just signal the loaded bootstrap.
+  const renderMermaid = () =>
+    document.dispatchEvent(new CustomEvent('mvu-mermaid-render'));
+
+  const ensureMermaid = () => {
+    if (mermaidInjected) {
+      renderMermaid();
+      return;
+    }
+    mermaidInjected = true;
+    const lib = document.createElement('script');
+    lib.src = chrome.runtime.getURL('mermaid.min.js');
+    lib.onload = () => {
+      const boot = document.createElement('script');
+      boot.src = chrome.runtime.getURL('mermaid-bootstrap.js');
+      (document.head || document.documentElement).appendChild(boot);
+    };
+    // Strict page CSP can block extension scripts; allow a later retry.
+    lib.onerror = () => { mermaidInjected = false; };
+    (document.head || document.documentElement).appendChild(lib);
+  };
+
+  // Swap each `<pre><code class="language-mermaid">` for a `.mvu-mermaid` div
+  // holding the decoded diagram source. Returns true if any were found.
+  const transformMermaid = () => {
+    const blocks = document.querySelectorAll(
+      'article.markdown-body pre > code.language-mermaid'
+    );
+    blocks.forEach((code) => {
+      const src = code.textContent;
+      const div = document.createElement('div');
+      div.className = 'mermaid mvu-mermaid';
+      div.setAttribute('data-mvu-src', src);
+      div.textContent = src;
+      const pre = code.closest('pre');
+      if (pre && pre.parentNode) pre.parentNode.replaceChild(div, pre);
+    });
+    return blocks.length > 0;
+  };
 
   const escapeHtml = (s) =>
     s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -31,9 +75,11 @@
     document.body.innerHTML =
       `<article class="markdown-body mvu-article" dir="auto">${clean}</article>` +
       footerHtml('footerSeeOriginal');
+    const hasMermaid = transformMermaid();
     document.querySelectorAll('article.markdown-body pre code').forEach((el) => {
       try { hljs.highlightElement(el); } catch (_) { /* unsupported language — leave plain */ }
     });
+    if (hasMermaid) ensureMermaid();
     const pathLeaf = decodeURIComponent(location.pathname.split('/').pop() || '');
     if (!document.title || document.title === location.href || document.title === pathLeaf) {
       const h = document.body.querySelector('h1, h2');
@@ -82,7 +128,10 @@
 
   chrome.storage.onChanged.addListener((changes, area) => {
     if (area !== 'sync') return;
-    if (changes.darkMode) applyDarkMode(changes.darkMode.newValue);
+    if (changes.darkMode) {
+      applyDarkMode(changes.darkMode.newValue);
+      if (mermaidInjected) renderMermaid();
+    }
     if (changes.contentWidth) applyContentWidth(changes.contentWidth.newValue);
   });
 

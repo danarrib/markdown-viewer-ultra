@@ -177,4 +177,17 @@ find . -name '*.md' -size +1k -print0 \
 
 一個普通的[連結](https://example.com)、一個自動連結 <https://example.com>，以及一個帶[標題屬性的連結](https://example.com "懸停查看")。
 
+---
+
+## Mermaid 圖表
+
+` ```mermaid ` 程式碼區塊會算繪為圖表，並跟隨目前的淺色/深色主題。
+
+```mermaid
+flowchart LR
+    A["Markdown"] --> B{"Mermaid?"}
+    B -->|"是"| C["圖表"]
+    B -->|"否"| D["程式碼"]
+```
+
 導覽結束 — 如果上面一切都顯示得很精緻，您正在體驗完整的功能集：排版、清單、程式碼上色、表格、引言，以及隨主題變化的色彩。

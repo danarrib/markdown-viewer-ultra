@@ -8,7 +8,7 @@
 //   npm run screenshots
 //
 // All shots are 1280x800 (Web Store spec). Output layout:
-//   ../store-assets/screenshots/<locale>/<a|b|c>-*.png
+//   ../store-assets/screenshots/<locale>/<a|b|c|d>-*.png
 //
 // For each supported locale we relaunch Chromium with --lang=<code> so
 // chrome.i18n.getMessage resolves to that locale's messages.json.
@@ -132,11 +132,29 @@ const sampleUrlFor = (dir) => {
       }
     );
 
+    // d. Mermaid diagram, dark theme, narrow — wait for the SVG, then scroll
+    // the diagram into view so it's the focus of the shot.
+    await shot(
+      'd-mermaid-dark-narrow.png',
+      sampleUrl,
+      { darkMode: 'dark', contentWidth: 'narrow' },
+      {
+        postRender: async (page) => {
+          await page.waitForSelector('.mvu-mermaid svg', { timeout: 15000 });
+          await page.evaluate(() => {
+            const el = document.querySelector('.mvu-mermaid');
+            if (el) el.scrollIntoView({ block: 'center' });
+          });
+          await page.waitForTimeout(300);
+        },
+      }
+    );
+
     await context.close();
   }
 
   console.log(
-    `\nDone — ${LOCALES.length * 3} screenshots in store-assets/screenshots/`
+    `\nDone — ${LOCALES.length * 4} screenshots in store-assets/screenshots/`
   );
 })().catch((err) => {
   console.error(err);
