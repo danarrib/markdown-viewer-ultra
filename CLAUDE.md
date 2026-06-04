@@ -39,8 +39,10 @@ manual override beats the OS preference.
 listener), it shows a "Not a markdown page" note. Messaging + `chrome.tabs.query`
 work with **only the `storage` permission** — no `tabs` permission needed.
 
-**Background (`background.js`):** the only job is registering
-`chrome.runtime.setUninstallURL` (feedback issue).
+**Background (`background.js`):** registers `chrome.runtime.setUninstallURL`
+(feedback issue), and on `onInstalled` with `reason === 'update'` + a changed
+`previousVersion`, opens `CHANGELOG.md` on GitHub via `chrome.tabs.create`
+(no `tabs` permission needed). The version guard keeps dev reloads silent.
 
 ### Mermaid (lazy-loaded, main world)
 

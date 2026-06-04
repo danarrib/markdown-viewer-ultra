@@ -990,6 +990,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versions are git
 - Mermaid is lazy-loaded (~2.7MB) only on pages that actually contain a diagram, keeping non-diagram pages unaffected
 - Per-locale `samples/<dir>.md` fixtures gained a localized Mermaid section for screenshots
 - `scripts/take-screenshots.js` now also captures a Mermaid diagram shot (`d-mermaid-dark-narrow.png`) per locale
+- On update to a new version, the extension opens `CHANGELOG.md` on GitHub (via `chrome.tabs.create` in the service worker — no new permission)
+- Added a top-level `CHANGELOG.md`
 
 **Technical**
 - Mermaid (`mermaid.min.js`) + a `mermaid-bootstrap.js` initializer are exposed via `web_accessible_resources` and injected into the page on demand — no new permissions required

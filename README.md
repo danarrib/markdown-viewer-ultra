@@ -30,6 +30,7 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 - Localized UI in 17 languages: English, Português (BR), Português (PT), Español, Français, Deutsch, Italiano, 日本語, 简体中文, 繁體中文, Русский, हिन्दी, বাংলা, ਪੰਜਾਬੀ, Türkçe, עברית, العربية
 - Toolbar icon (16/32/48/128 PNGs)
 - Opens the feedback issue when uninstalled
+- Opens the [changelog](CHANGELOG.md) when Chrome updates the extension to a new version
 
 ## Test it
 
@@ -51,7 +52,7 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 ```
 md-viewer-ultra/
 ├── manifest.json         # MV3 declaration (action + content_script + bg)
-├── background.js         # Service worker — registers uninstall URL
+├── background.js         # Service worker — uninstall URL + opens changelog on update
 ├── content.js            # Detection, render, raw/render toggle, theme apply, hljs
 ├── styles.css            # Page chrome, footer, raw view, force-theme vars
 ├── hljs-theme.css        # Maps hljs token classes to GitHub prettylights vars
