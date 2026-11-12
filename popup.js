@@ -3,7 +3,9 @@ const widthInputs = document.querySelectorAll('input[name="width"]');
 const renderSection = document.getElementById('render-section');
 const toggleBtn = document.getElementById('toggle-render');
 const stateNote = document.getElementById('render-state-note');
-const notMd = document.getElementById('not-md');
+const notMdSection = document.getElementById('not-md-section');
+const fileAccessHint = document.getElementById('file-access-hint');
+const openExtSettingsBtn = document.getElementById('open-ext-settings');
 
 document.querySelectorAll('[data-i18n]').forEach((el) => {
   const key = el.getAttribute('data-i18n');
@@ -25,14 +27,30 @@ const updateRenderUi = (rendered) => {
   );
 };
 
-const showNotMarkdown = () => {
+const isFileAccessAllowed = () =>
+  new Promise((resolve) => {
+    if (!chrome.extension || !chrome.extension.isAllowedFileSchemeAccess) {
+      resolve(true);
+      return;
+    }
+    chrome.extension.isAllowedFileSchemeAccess((allowed) => {
+      if (chrome.runtime.lastError) resolve(true);
+      else resolve(Boolean(allowed));
+    });
+  });
+
+const showNotMarkdown = async (tab) => {
+  const maybeFileUrl =
+    !tab || !tab.url || tab.url.toLowerCase().startsWith('file://');
+  const showHint = maybeFileUrl && !(await isFileAccessAllowed());
+  fileAccessHint.classList.toggle('hidden', !showHint);
   renderSection.classList.add('hidden');
-  notMd.classList.remove('hidden');
+  notMdSection.classList.remove('hidden');
 };
 
 const showMarkdownControls = (isRendered) => {
   renderSection.classList.remove('hidden');
-  notMd.classList.add('hidden');
+  notMdSection.classList.add('hidden');
   updateRenderUi(isRendered);
 };
 
@@ -60,7 +78,9 @@ widthInputs.forEach((input) => {
 
 const queryActiveTab = () =>
   new Promise((resolve) => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => resolve(tabs[0]));
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) =>
+      resolve(tabs && tabs[0])
+    );
   });
 
 const sendToContent = (tabId, payload) =>
@@ -74,12 +94,12 @@ const sendToContent = (tabId, payload) =>
 (async () => {
   const tab = await queryActiveTab();
   if (!tab || !tab.id) {
-    showNotMarkdown();
+    await showNotMarkdown(tab);
     return;
   }
   const resp = await sendToContent(tab.id, { type: 'getState' });
   if (resp && resp.isMarkdown) showMarkdownControls(resp.isRendered);
-  else showNotMarkdown();
+  else await showNotMarkdown(tab);
 })();
 
 toggleBtn.addEventListener('click', async () => {
@@ -88,3 +108,14 @@ toggleBtn.addEventListener('click', async () => {
   const resp = await sendToContent(tab.id, { type: 'toggleRender' });
   if (resp) updateRenderUi(resp.isRendered);
 });
+
+if (openExtSettingsBtn) {
+  openExtSettingsBtn.addEventListener('click', () => {
+    const url = chrome.runtime.id
+      ? `chrome://extensions/?id=${chrome.runtime.id}`
+      : 'chrome://extensions';
+    chrome.tabs.create({ url }, () => {
+      void chrome.runtime.lastError;
+    });
+  });
+}

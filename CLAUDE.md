@@ -36,8 +36,13 @@ manual override beats the OS preference.
 
 **Popup ↔ content:** `popup.js` uses `chrome.tabs.sendMessage` with
 `getState` / `toggleRender` messages. If the active tab isn't markdown (no
-listener), it shows a "Not a markdown page" note. Messaging + `chrome.tabs.query`
-work with **only the `storage` permission** — no `tabs` permission needed.
+listener), it shows a "Not a markdown page" note; when
+`chrome.extension.isAllowedFileSchemeAccess` is `false` (and because `tab.url`
+is `undefined` without the `tabs` permission), it also displays a local-file
+hint and an **Open extension settings** button (`chrome.tabs.create` to
+`chrome://extensions/?id=...`). Messaging, `chrome.tabs.query`,
+`chrome.tabs.create`, and `isAllowedFileSchemeAccess` work with **only the
+`storage` permission** — no `tabs` permission needed.
 
 **Background (`background.js`):** registers `chrome.runtime.setUninstallURL`
 (feedback issue), and on `onInstalled` with `reason === 'update'` + a changed

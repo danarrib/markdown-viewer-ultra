@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "目前顯示渲染檢視。" },
   "popupStateRaw": { "message": "目前顯示原始文字。" },
   "popupNotMarkdown": { "message": "目前頁面不是 Markdown。請開啟 <code>.md</code> 檔案或 <code>Content-Type: text/markdown</code> 的頁面。" },
+  "popupFileAccessHint": { "message": "正在開啟本機 <code>.md</code> 檔案？請在擴充功能詳細資訊中啟用 <strong>允許存取檔案網址</strong>，然後重新整理頁面。" },
+  "popupOpenExtSettings": { "message": "開啟擴充功能設定" },
   "footerPrefix": { "message": "由 Markdown Viewer Ultra 渲染" },
   "footerSeeOriginal": { "message": "檢視原文" },
   "footerSeeRendered": { "message": "檢視渲染" },

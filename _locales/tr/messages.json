@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "Şu anda render edilmiş görünüm gösteriliyor." },
   "popupStateRaw": { "message": "Şu anda ham metin gösteriliyor." },
   "popupNotMarkdown": { "message": "Geçerli sayfa Markdown değil. Bir <code>.md</code> dosyası veya <code>Content-Type: text/markdown</code> içeren bir sayfa açın." },
+  "popupFileAccessHint": { "message": "Yerel bir <code>.md</code> dosyası mı açıyorsunuz? Uzantı ayrıntılarında <strong>Dosya URL’lerine erişime izin ver</strong> seçeneğini etkinleştirip sayfayı yenileyin." },
+  "popupOpenExtSettings": { "message": "Uzantı ayarlarını aç" },
   "footerPrefix": { "message": "Markdown Viewer Ultra ile render edildi" },
   "footerSeeOriginal": { "message": "Orijinali gör" },
   "footerSeeRendered": { "message": "Render edilmişi gör" },

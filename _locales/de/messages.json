@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "Gerenderte Ansicht wird angezeigt." },
   "popupStateRaw": { "message": "Quelltext wird angezeigt." },
   "popupNotMarkdown": { "message": "Die aktuelle Seite ist kein Markdown. Öffne eine <code>.md</code>-Datei oder eine Seite mit <code>Content-Type: text/markdown</code>." },
+  "popupFileAccessHint": { "message": "Öffnest du eine lokale <code>.md</code>-Datei? Aktiviere in den Erweiterungsdetails <strong>Zugriff auf Datei-URLs zulassen</strong> und lade die Seite neu." },
+  "popupOpenExtSettings": { "message": "Erweiterungseinstellungen öffnen" },
   "footerPrefix": { "message": "Gerendert mit Markdown Viewer Ultra" },
   "footerSeeOriginal": { "message": "Original anzeigen" },
   "footerSeeRendered": { "message": "Gerendertes anzeigen" },

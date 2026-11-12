@@ -40,10 +40,21 @@
       <p id="render-state-note" class="muted"></p>
     </section>
 
-    <p id="not-md" class="row muted hidden" data-i18n="popupNotMarkdown" data-i18n-html>
-      Current page is not Markdown. Open a <code>.md</code> file or a page with
-      <code>Content-Type: text/markdown</code>.
-    </p>
+    <div id="not-md-section" class="row hidden">
+      <p id="not-md" class="muted not-md-msg" dir="auto" data-i18n="popupNotMarkdown" data-i18n-html>
+        Current page is not Markdown. Open a <code>.md</code> file or a page with
+        <code>Content-Type: text/markdown</code>.
+      </p>
+      <div id="file-access-hint" class="file-hint hidden">
+        <p class="muted" dir="auto" data-i18n="popupFileAccessHint" data-i18n-html>
+          Opening a local <code>.md</code> file? Enable
+          <strong>Allow access to file URLs</strong> in extension details, then refresh the page.
+        </p>
+        <button id="open-ext-settings" type="button" class="btn file-hint-btn" data-i18n="popupOpenExtSettings">
+          Open extension settings
+        </button>
+      </div>
+    </div>
 
     <footer class="foot muted" id="version"></footer>
 

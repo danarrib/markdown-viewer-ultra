@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "ਹੁਣ ਰੈਂਡਰ ਕੀਤਾ ਦ੍ਰਿਸ਼ ਦਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।" },
   "popupStateRaw": { "message": "ਹੁਣ ਅਸਲ ਟੈਕਸਟ ਦਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।" },
   "popupNotMarkdown": { "message": "ਮੌਜੂਦਾ ਪੰਨਾ Markdown ਨਹੀਂ ਹੈ। ਕੋਈ <code>.md</code> ਫਾਈਲ ਜਾਂ <code>Content-Type: text/markdown</code> ਵਾਲਾ ਪੰਨਾ ਖੋਲ੍ਹੋ।" },
+  "popupFileAccessHint": { "message": "ਕੀ ਤੁਸੀਂ ਸਥਾਨਕ <code>.md</code> ਫ਼ਾਈਲ ਖੋਲ੍ਹ ਰਹੇ ਹੋ? ਐਕਸਟੈਂਸ਼ਨ ਵੇਰਵਿਆਂ ਵਿੱਚ <strong>Allow access to file URLs</strong> ਚਾਲੂ ਕਰੋ, ਫਿਰ ਪੰਨਾ ਰੀਫ਼੍ਰੈਸ਼ ਕਰੋ।" },
+  "popupOpenExtSettings": { "message": "ਐਕਸਟੈਂਸ਼ਨ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ" },
   "footerPrefix": { "message": "Markdown Viewer Ultra ਦੁਆਰਾ ਰੈਂਡਰ" },
   "footerSeeOriginal": { "message": "ਅਸਲ ਦੇਖੋ" },
   "footerSeeRendered": { "message": "ਰੈਂਡਰ ਦੇਖੋ" },

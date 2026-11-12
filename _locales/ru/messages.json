@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "Сейчас показан отрендеренный вид." },
   "popupStateRaw": { "message": "Сейчас показан исходный текст." },
   "popupNotMarkdown": { "message": "Текущая страница не является Markdown. Откройте файл <code>.md</code> или страницу с <code>Content-Type: text/markdown</code>." },
+  "popupFileAccessHint": { "message": "Открываете локальный файл <code>.md</code>? Включите <strong>Разрешить открывать локальные файлы по ссылкам</strong> в настройках расширения и обновите страницу." },
+  "popupOpenExtSettings": { "message": "Открыть настройки расширения" },
   "footerPrefix": { "message": "Отрендерено Markdown Viewer Ultra" },
   "footerSeeOriginal": { "message": "Показать исходник" },
   "footerSeeRendered": { "message": "Показать рендер" },

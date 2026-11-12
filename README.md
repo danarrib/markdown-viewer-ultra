@@ -15,6 +15,14 @@ Chrome extension that renders pages with MIME type `text/markdown` (and `.md` fi
 3. Click **Load unpacked** and select this folder
 4. (Optional, for local `.md` files) Click **Details** on the loaded extension → enable **Allow access to file URLs**
 
+## Local `.md` files (`file://`)
+
+Chrome blocks extensions from accessing local `file://` URLs by default (for both Chrome Web Store and unpacked installs). If opening a `.md` file from disk shows raw text and the popup says *"Current page is not Markdown"*:
+
+1. Click **Open extension settings** in the popup hint (or open `chrome://extensions`, find **Markdown Viewer Ultra**, and click **Details**)
+2. Enable **Allow access to file URLs**
+3. Refresh the `.md` tab
+
 ## Features
 
 - Auto-renders `text/markdown` and `text/x-markdown` responses
