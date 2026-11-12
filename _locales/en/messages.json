@@ -43,6 +43,14 @@
     "message": "Current page is not Markdown. Open a <code>.md</code> file or a page with <code>Content-Type: text/markdown</code>.",
     "description": "Notice shown when the popup opens on a non-Markdown page. Preserve the <code> tags around .md and Content-Type — they style those as inline code."
   },
+  "popupFileAccessHint": {
+    "message": "Opening a local <code>.md</code> file? Enable <strong>Allow access to file URLs</strong> in extension details, then refresh the page.",
+    "description": "Hint shown below the not-Markdown notice when file:// URL access is disabled for the extension. Preserve the <code> and <strong> tags."
+  },
+  "popupOpenExtSettings": {
+    "message": "Open extension settings",
+    "description": "Button label that opens chrome://extensions details for this extension so the user can enable Allow access to file URLs."
+  },
   "footerPrefix": {
     "message": "Markdown Viewer Ultra Render",
     "description": "Footer label on rendered pages, before the See original / See rendered link. Keep the product name 'Markdown Viewer Ultra' in English; translate only the surrounding wording."

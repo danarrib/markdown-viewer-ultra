@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "Exibindo a visualização renderizada." },
   "popupStateRaw": { "message": "Exibindo o texto original." },
   "popupNotMarkdown": { "message": "A página atual não é Markdown. Abra um arquivo <code>.md</code> ou uma página com <code>Content-Type: text/markdown</code>." },
+  "popupFileAccessHint": { "message": "Abrindo um arquivo <code>.md</code> local? Ative <strong>Permitir acesso aos URLs do arquivo</strong> nos detalhes da extensão e atualize a página." },
+  "popupOpenExtSettings": { "message": "Abrir configurações da extensão" },
   "footerPrefix": { "message": "Renderizado por Markdown Viewer Ultra" },
   "footerSeeOriginal": { "message": "Ver original" },
   "footerSeeRendered": { "message": "Ver renderizado" },

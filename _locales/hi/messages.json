@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "अभी रेंडर किया हुआ दृश्य दिख रहा है।" },
   "popupStateRaw": { "message": "अभी मूल टेक्स्ट दिख रहा है।" },
   "popupNotMarkdown": { "message": "वर्तमान पृष्ठ Markdown नहीं है। कोई <code>.md</code> फ़ाइल या <code>Content-Type: text/markdown</code> वाला पृष्ठ खोलें।" },
+  "popupFileAccessHint": { "message": "क्या आप कोई स्थानीय <code>.md</code> फ़ाइल खोल रहे हैं? एक्सटेंशन विवरण में <strong>फ़ाइल URL का ऐक्सेस दें</strong> (Allow access to file URLs) चालू करें और पेज रीफ़्रेश करें।" },
+  "popupOpenExtSettings": { "message": "एक्सटेंशन सेटिंग्स खोलें" },
   "footerPrefix": { "message": "Markdown Viewer Ultra द्वारा रेंडर" },
   "footerSeeOriginal": { "message": "मूल देखें" },
   "footerSeeRendered": { "message": "रेंडर देखें" },

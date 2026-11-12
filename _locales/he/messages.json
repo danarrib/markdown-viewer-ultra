@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "כעת מוצגת התצוגה המעובדת." },
   "popupStateRaw": { "message": "כעת מוצג הטקסט הגולמי." },
   "popupNotMarkdown": { "message": "הדף הנוכחי אינו Markdown. פתח קובץ <code>.md</code> או דף עם <code>Content-Type: text/markdown</code>." },
+  "popupFileAccessHint": { "message": "פותח קובץ <code>.md</code> מקומי? הפעל את <strong>אפשר גישה לכתובות URL של קבצים</strong> בפרטי התוסף ולאחר מכן רענן את הדף." },
+  "popupOpenExtSettings": { "message": "פתח את הגדרות התוסף" },
   "footerPrefix": { "message": "עובד על ידי Markdown Viewer Ultra" },
   "footerSeeOriginal": { "message": "הצג מקור" },
   "footerSeeRendered": { "message": "הצג מעובד" },

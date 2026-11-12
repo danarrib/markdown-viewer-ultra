@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "এখন রেন্ডার করা ভিউ দেখানো হচ্ছে।" },
   "popupStateRaw": { "message": "এখন মূল টেক্সট দেখানো হচ্ছে।" },
   "popupNotMarkdown": { "message": "বর্তমান পৃষ্ঠাটি Markdown নয়। একটি <code>.md</code> ফাইল বা <code>Content-Type: text/markdown</code> সহ একটি পৃষ্ঠা খুলুন।" },
+  "popupFileAccessHint": { "message": "লোকাল <code>.md</code> ফাইল খুলছেন? এক্সটেনশনের বিস্তারিত পাতায় <strong>Allow access to file URLs</strong> চালু করুন, তারপর পৃষ্ঠাটি রিফ্রেশ করুন।" },
+  "popupOpenExtSettings": { "message": "এক্সটেনশন সেটিংস খুলুন" },
   "footerPrefix": { "message": "Markdown Viewer Ultra দ্বারা রেন্ডার করা হয়েছে" },
   "footerSeeOriginal": { "message": "মূল দেখুন" },
   "footerSeeRendered": { "message": "রেন্ডার করা দেখুন" },

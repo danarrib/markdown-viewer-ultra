@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "يتم عرض الواجهة المعروضة حاليًا." },
   "popupStateRaw": { "message": "يتم عرض النص الأصلي حاليًا." },
   "popupNotMarkdown": { "message": "الصفحة الحالية ليست Markdown. افتح ملف <code>.md</code> أو صفحة مع <code>Content-Type: text/markdown</code>." },
+  "popupFileAccessHint": { "message": "هل تفتح ملف <code>.md</code> محليًا؟ فعّل <strong>السماح بالوصول إلى عناوين URL للملفات</strong> (Allow access to file URLs) في تفاصيل الإضافة، ثم حدّث الصفحة." },
+  "popupOpenExtSettings": { "message": "فتح إعدادات الإضافة" },
   "footerPrefix": { "message": "تم العرض بواسطة Markdown Viewer Ultra" },
   "footerSeeOriginal": { "message": "عرض الأصلي" },
   "footerSeeRendered": { "message": "عرض المعروض" },

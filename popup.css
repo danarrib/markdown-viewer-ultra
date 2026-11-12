@@ -141,6 +141,24 @@ body {
   display: none !important;
 }
 
+.not-md-msg {
+  margin-top: 0;
+}
+
+.file-hint {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.file-hint .muted {
+  margin-top: 0;
+}
+
+.file-hint-btn {
+  margin-top: 8px;
+}
+
 code {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;

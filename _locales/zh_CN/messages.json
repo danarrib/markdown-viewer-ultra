@@ -10,6 +10,8 @@
   "popupStateRendered": { "message": "当前显示渲染视图。" },
   "popupStateRaw": { "message": "当前显示原始文本。" },
   "popupNotMarkdown": { "message": "当前页面不是 Markdown。请打开 <code>.md</code> 文件或 <code>Content-Type: text/markdown</code> 的页面。" },
+  "popupFileAccessHint": { "message": "正在打开本地 <code>.md</code> 文件？请在扩展程序详情中启用 <strong>允许访问文件网址</strong>，然后刷新页面。" },
+  "popupOpenExtSettings": { "message": "打开扩展程序设置" },
   "footerPrefix": { "message": "由 Markdown Viewer Ultra 渲染" },
   "footerSeeOriginal": { "message": "查看原文" },
   "footerSeeRendered": { "message": "查看渲染" },
